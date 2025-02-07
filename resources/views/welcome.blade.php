@@ -1180,11 +1180,14 @@
                                     <img src="{{ asset('assets/img/GSM.jpg') }}"
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="Gedung Serba Guna">
-                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
                                         <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-2xl font-bold text-center text-hijau1">Gedung Serba Guna
+                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Gedung
+                                                Serba Guna
                                             </h2>
-                                            <p class="mt-2">Gedung untuk pernikahan, pengajian, acara hari besar.</p>
+                                            <p class="hidden mt-2 text-sm md:text-base md:inline">Gedung untuk
+                                                pernikahan, pengajian,
+                                                acara hari besar.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1194,10 +1197,13 @@
                                     <img src="{{ asset('assets/img/tempatsholat.jpg') }}"
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="tempat sholat">
-                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
                                         <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-2xl font-bold text-center text-hijau1">Tempat Sholat</h2>
-                                            <p class="mt-2">Tempat sholat yang tersedia dengan 2 lantai.</p>
+                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Tempat
+                                                Sholat</h2>
+                                            <p class="hidden mt-2 text-sm md:text-base md:inline">Tempat sholat yang
+                                                tersedia dengan 2
+                                                lantai.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1207,10 +1213,13 @@
                                     <img src="{{ asset('assets/img/keranda.jpg') }}"
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="keranda">
-                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
                                         <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-2xl font-bold text-center text-hijau1">Keranda</h2>
-                                            <p class="mt-2">Keranda untuk mengangkut jenazah tersedia di masjid.</p>
+                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Keranda
+                                            </h2>
+                                            <p class="hidden mt-2 text-sm md:text-base md:inline">Keranda untuk
+                                                mengangkut jenazah
+                                                tersedia di masjid.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1220,10 +1229,12 @@
                                     <img src="{{ asset('assets/img/kainkafan.jpg') }}"
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
                                         alt="kain kafan">
-                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
                                         <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-2xl font-bold text-center text-hijau1">Kain Kafan</h2>
-                                            <p class="mt-2">Kain kafan tersedia untuk keperluan jenazah.</p>
+                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Kain
+                                                Kafan</h2>
+                                            <p class="hidden mt-2 md:inline">Kain kafan tersedia untuk keperluan
+                                                jenazah.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1233,10 +1244,12 @@
                                     <img src="{{ asset('assets/img/toilet.jpg') }}"
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="toilet">
-                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
                                         <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-2xl font-bold text-center text-hijau1">Toilet</h2>
-                                            <p class="mt-2">Tersedia toilet untuk laki - laki di lantai bawah dan
+                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Toilet
+                                            </h2>
+                                            <p class="hidden mt-2 md:inline">Tersedia toilet untuk laki - laki di
+                                                lantai bawah dan
                                                 perempuan di lantai atas.</p>
                                         </div>
                                     </div>
@@ -1246,10 +1259,12 @@
                                     <img src="{{ asset('assets/img/AC.jpg') }}"
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="AC">
-                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
                                         <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-2xl font-bold text-center text-hijau1">Air Conditioner</h2>
-                                            <p class="mt-2">Masjid dilengkapi dengan AC agar jamaah nyaman dalam
+                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Air
+                                                Conditioner</h2>
+                                            <p class="hidden mt-2 md:inline">Masjid dilengkapi dengan AC agar jamaah
+                                                nyaman dalam
                                                 beribadah.</p>
                                         </div>
                                     </div>
