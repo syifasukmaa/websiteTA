@@ -919,7 +919,7 @@
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
         <div
-            class="relative flex flex-col items-center justify-center min-h-screen selection:bg-green-400 selection:text-white">
+            class="relative flex flex-col items-center justify-center min-h-screen overflow-hidden selection:bg-green-400 selection:text-white">
             <div class="relative w-full max-w-2xl md:max-w-full">
                 <div class="py-2 overflow-hidden bg-green-100 border border-green-600 marquee-masjid-interaktif">
                     <p class="inline-block font-medium text-green-800 whitespace-nowrap animate-marquee">
@@ -937,11 +937,11 @@
                         <img class="w-[13%] md:w-[8%] lg:w-[5%]  block mr-14"
                             src="{{ asset('assets/img/logoMasjid.png') }}"" alt="Logo Masjid At Taubah">
                         <button navbar-trigger
-                            class="px-3 py-1 ml-2 text-lg leading-none transition-all ease-out bg-transparent border-2 rounded-lg shadow-none cursor-pointer border-hijau1 lg:hidden"
+                            class="px-3 py-1 ml-1 text-lg leading-none transition-all ease-out bg-transparent rounded-lg shadow-none cursor-pointer lg:hidden"
                             type="button" aria-controls="navigation" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span
-                                class="inline-block w-6 h-6 mt-2 align-middle bg-center bg-no-repeat bg-cover bg-none">
+                                class="inline-block w-6 h-6 mt-2 align-middle bg-center bg-no-repeat bg-cover lg:mt-2 bg-none">
                                 <span bar1
                                     class="relative block h-1 mx-auto my-0 transition-all duration-300 bg-gray-600 rounded-sm w-7"></span>
                                 <span bar2
@@ -951,7 +951,7 @@
                             </span>
                         </button>
                         <div navbar-menu
-                            class="items-center justify-end overflow-hidden transition-all duration-500 ease-soft lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
+                            class="items-center justify-end mt-4 overflow-hidden transition-all duration-500 lg:mt-0 ease-soft lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
                             <ul class="flex flex-col justify-end pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto">
                                 <li class="text-xl">
                                     <a class="flex items-center px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
@@ -991,7 +991,7 @@
                         </div>
                     </div>
                 </nav>
-                <main class="mt-24 lg:mt-32">
+                <main class="mt-24 md:mt-28 lg:mt-32">
                     <header id="beranda" class="relative flex items-center justify-center h-screen overflow-hidden">
                         <div class="absolute inset-0 z-0 w-full h-full bg-center bg-cover"
                             style="background-image: url('{{ asset('assets/img/masjid.jpg') }}');">
@@ -1027,51 +1027,51 @@
                         </h1>
                         <p class="text-lg text-center text-hijau2">Depok, Sukmajaya</p>
                         <p class="text-lg text-center text-hijau2" id="date_sholat">Hari</p>
-                        <div class="grid grid-cols-6 gap-1 mt-9 lg:px-14 lg:gap-3">
+                        <div class="grid grid-cols-6 mt-9 lg:px-14 lg:gap-3">
                             <div
-                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
+                                class="block p-2 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌘
                                     Imsak
                                 </h5>
-                                <p class="font-normal text-gray-700 dark:text-gray-400 imsak">Pukul </p>
+                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 imsak">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau2">
+                                class="block p-2 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau2">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌅
                                     Subuh
                                 </h5>
-                                <p class="font-normal text-gray-700 dark:text-gray-400 subuh">Pukul </p>
+                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 subuh">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
+                                class="block p-2 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌞
                                     Dzuhur
                                 </h5>
-                                <p class="font-normal text-gray-700 dark:text-gray-400 dzuhur">Pukul </p>
+                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 dzuhur">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau4">
+                                class="block p-2 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌤️
                                     Ashar
                                 </h5>
-                                <p class="font-normal text-gray-700 dark:text-gray-400 ashar">Pukul </p>
+                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 ashar">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
+                                class="block p-2 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌌
                                     Maghrib
                                 </h5>
-                                <p class="font-normal text-gray-700 dark:text-gray-400 maghrib">Pukul </p>
+                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 maghrib">Pukul </p>
                             </div>
                             <div
                                 class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau4">
@@ -1079,7 +1079,7 @@
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌙 Isya
                                 </h5>
-                                <p class="font-normal text-gray-700 dark:text-gray-400 isya">Pukul </p>
+                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 isya">Pukul </p>
                             </div>
                         </div>
                         <p class="px-4 mt-4 text-center lg:px-14">*Sumber <a
@@ -1101,11 +1101,11 @@
                                 Masjid</h1>
                         </div>
 
-                        <div class="mt-10 md:mt-14 swiper-container">
+                        <div class="mt-10 overflow-hidden md:mt-14 swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
                                         <img class="rounded-t-lg" src="{{ asset('assets/img/zakat.jpeg') }}"
                                             alt="zakat" />
                                         <div class="p-5">
@@ -1118,7 +1118,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
                                         <img class="rounded-t-lg" src="{{ asset('assets/img/hewanqurban.jpeg') }}"
                                             alt="hewan qurban" />
                                         <div class="p-5">
@@ -1131,7 +1131,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
                                         <img class="rounded-t-lg" src="{{ asset('assets/img/santunan.jpg') }}"
                                             alt="santunan" />
                                         <div class="p-5">
@@ -1144,7 +1144,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
                                         <img class="rounded-t-lg"
                                             src="{{ asset('assets/img/penggalanganDana.jpg') }}"
                                             alt="penggalangan dana" />
@@ -1161,7 +1161,7 @@
                         </div>
 
                     </div>
-                    <div class="relative px-8 py-16 md:px-14 lg:px-28 lg:mt-24 mt-10" id="fasilitas">
+                    <div class="relative px-8 py-16 mt-10 md:px-14 lg:px-28 lg:mt-24" id="fasilitas">
                         <img src="{{ asset('assets/img/pattern4.png') }}"
                             class="absolute -top-10 lg:-top-[95px] right-0 w-[40%] lg:w-[20%] md:w-[25%]"
                             alt="patter islamic">
@@ -1181,8 +1181,8 @@
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="Gedung Serba Guna">
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
-                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Gedung Serba Guna
+                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
+                                            <h2 class="text-2xl font-bold text-center text-hijau1">Gedung Serba Guna
                                             </h2>
                                             <p class="mt-2">Gedung untuk pernikahan, pengajian, acara hari besar.</p>
                                         </div>
@@ -1195,8 +1195,8 @@
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="tempat sholat">
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
-                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Tempat Sholat</h2>
+                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
+                                            <h2 class="text-2xl font-bold text-center text-hijau1">Tempat Sholat</h2>
                                             <p class="mt-2">Tempat sholat yang tersedia dengan 2 lantai.</p>
                                         </div>
                                     </div>
@@ -1208,8 +1208,8 @@
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="keranda">
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
-                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Keranda</h2>
+                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
+                                            <h2 class="text-2xl font-bold text-center text-hijau1">Keranda</h2>
                                             <p class="mt-2">Keranda untuk mengangkut jenazah tersedia di masjid.</p>
                                         </div>
                                     </div>
@@ -1221,8 +1221,8 @@
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
                                         alt="kain kafan">
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
-                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Kain Kafan</h2>
+                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
+                                            <h2 class="text-2xl font-bold text-center text-hijau1">Kain Kafan</h2>
                                             <p class="mt-2">Kain kafan tersedia untuk keperluan jenazah.</p>
                                         </div>
                                     </div>
@@ -1234,8 +1234,8 @@
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="toilet">
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
-                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Toilet</h2>
+                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
+                                            <h2 class="text-2xl font-bold text-center text-hijau1">Toilet</h2>
                                             <p class="mt-2">Tersedia toilet untuk laki - laki di lantai bawah dan
                                                 perempuan di lantai atas.</p>
                                         </div>
@@ -1247,8 +1247,8 @@
                                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                         alt="AC">
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
-                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Air Conditioner</h2>
+                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
+                                            <h2 class="text-2xl font-bold text-center text-hijau1">Air Conditioner</h2>
                                             <p class="mt-2">Masjid dilengkapi dengan AC agar jamaah nyaman dalam
                                                 beribadah.</p>
                                         </div>
@@ -1303,13 +1303,13 @@
                         </div>
 
                     </div>
-                    <div class="px-8 py-16  border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r relative from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
+                    <div class="relative px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
                         id="galeri">
                         <img src="{{ asset('assets/img/pattern5.png') }}"
                             class="absolute -top-[10px] right-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
                         <img src="{{ asset('assets/img/pattern6.png') }}"
                             class="absolute top-[5px] left-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
-                        <h1 class="text-3xl font-bold tracking-wide text-center text-white hover:underline uppercase">
+                        <h1 class="text-3xl font-bold tracking-wide text-center text-white uppercase hover:underline">
                             Galeri
                             Masjid</h1>
                         <div class="grid grid-cols-2 gap-4 mt-8 md:mt-14 md:grid-cols-3">
