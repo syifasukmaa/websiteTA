@@ -933,8 +933,8 @@
 
                 <nav
                     class="absolute left-0 right-0 z-30 flex flex-wrap items-center px-4 py-2 mx-6 my-4 shadow-2xl top-10 rounded-xl bg-white/80 backdrop-blur-lg backdrop-saturate-100 lg:flex-nowrap lg:justify-start">
-                    <div class="flex items-center justify-between w-full p-0 pl-6 mx-auto flex-wrap-inherit">
-                        <img class="w-[13%] md:w-[8%] lg:w-[5%]  block mr-14"
+                    <div class="flex items-center justify-between w-full p-0 mx-auto md:pl-6 flex-wrap-inherit">
+                        <img class="w-[15%] md:w-[8%] lg:w-[5%] block mr-14"
                             src="{{ asset('assets/img/logoMasjid.png') }}"" alt="Logo Masjid At Taubah">
                         <button navbar-trigger
                             class="px-3 py-1 ml-1 text-lg leading-none transition-all ease-out bg-transparent rounded-lg shadow-none cursor-pointer lg:hidden"
@@ -951,7 +951,7 @@
                             </span>
                         </button>
                         <div navbar-menu
-                            class="items-center justify-end mt-4 overflow-hidden transition-all duration-500 lg:mt-0 ease-soft lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
+                            class="items-center justify-end overflow-hidden transition-all duration-500 ease-soft lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
                             <ul class="flex flex-col justify-end pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto">
                                 <li class="text-xl">
                                     <a class="flex items-center px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
@@ -1022,7 +1022,7 @@
                             class="absolute -bottom-[50px] lg:-bottom-[90px] inset-x-0 w-[10%] md:w-[8%] lg:w-[5%]"
                             alt="patter islamic">
                         <h1
-                            class="text-2xl font-bold tracking-wide text-center md:text-3xl text-hijau1 hover:underline">
+                            class="text-2xl font-bold tracking-wide text-center uppercase md:text-3xl text-hijau1 hover:underline">
                             Jadwal Sholat
                         </h1>
                         <p class="text-lg text-center text-hijau2">Depok, Sukmajaya</p>
@@ -1095,7 +1095,7 @@
                         </div>
                         <div class="relative z-10 flex flex-col items-center justify-center p-5 text-white rounded-lg">
                             <h1
-                                class="text-2xl font-bold tracking-wide text-center text-white md:text-3xl hover:underline">
+                                class="text-3xl font-bold tracking-wide text-center text-white uppercase md:text-3xl hover:underline">
                                 Layanan dan
                                 Bantuan
                                 Masjid</h1>
@@ -1161,19 +1161,20 @@
                         </div>
 
                     </div>
-                    <div class="relative px-8 py-16 mt-10 md:px-14 lg:px-28 lg:mt-24" id="fasilitas">
+                    <div class="relative px-8 pt-16 mt-10 md:px-14 lg:px-28 lg:mt-24" id="fasilitas">
                         <img src="{{ asset('assets/img/pattern4.png') }}"
                             class="absolute -top-10 lg:-top-[95px] right-0 w-[40%] lg:w-[20%] md:w-[25%]"
                             alt="patter islamic">
                         <img src="{{ asset('assets/img/pattern3.png') }}"
                             class="absolute -top-[40px] lg:-top-[75px] left-2 lg:left-4 w-[20%] lg:w-[8%] md:w-[15%]"
                             alt="patter islamic">
-                        <h1 class="text-3xl font-bold tracking-wide text-center uppercase text-hijau1 hover:underline">
+                        <h1
+                            class="text-2xl font-bold tracking-wide text-center uppercase md:text-3xl text-hijau1 hover:underline">
                             Fasilitas
                             Masjid</h1>
 
 
-                        <div id="default-carousel" class="relative w-full mt-10 lg:mt-14" data-carousel="static">
+                        <div id="default-carousel" class="relative w-full lg:mt-14" data-carousel="static">
                             <!-- Carousel wrapper -->
                             <div class="relative h-96 overflow-hidden rounded-lg  md:h-[500px]">
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -1318,13 +1319,14 @@
                         </div>
 
                     </div>
-                    <div class="relative px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
+                    <div class="relative px-8 py-16 border border-gray-200 rounded-lg shadow-lg md:mt-24 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
                         id="galeri">
                         <img src="{{ asset('assets/img/pattern5.png') }}"
                             class="absolute -top-[10px] right-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
                         <img src="{{ asset('assets/img/pattern6.png') }}"
                             class="absolute top-[5px] left-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
-                        <h1 class="text-3xl font-bold tracking-wide text-center text-white uppercase hover:underline">
+                        <h1
+                            class="text-2xl font-bold tracking-wide text-center text-white uppercase md:text-3xl hover:underline">
                             Galeri
                             Masjid</h1>
                         <div class="grid grid-cols-2 gap-4 mt-8 md:mt-14 md:grid-cols-3">
@@ -1356,7 +1358,9 @@
                     </div>
 
                     <div class="px-3 py-16 md:px-8 lg:mt-24 mt-14">
-                        <h1 class="mb-8 text-3xl font-bold tracking-wide text-center uppercase text-hijau1">Lokasi
+                        <h1
+                            class="mb-8 text-2xl font-bold tracking-wide text-center uppercase md:text-3xl text-hijau1">
+                            Lokasi
                             Masjid</h1>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4368505855245!2d106.8479536!3d-6.3799304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec77d6134e97%3A0xf5bedde41bf5124e!2sMasjid%20Jami'%20At-Taubah!5e0!3m2!1sen!2sid!4v1612309600000!5m2!1sen!2sid"
