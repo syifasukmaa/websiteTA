@@ -28,15 +28,25 @@ class PendaftarQurbanController extends Controller
         return view(
             'admin.qurban.pendaftarQurban.dashboard',
             [
-                'qurbans' => $qurbans->paginate(5),
+                'qurbans' => $qurbans->paginate(10),
             ]
         );
     }
     public function kerbau()
     {
         $qurbans = PengqurbanSapi::latest();
+        if (request('search')) {
+            $qurbans->where('nama_satu', 'like', '%' . request('search') . '%')
+                ->orWhere('jenis_hewan', 'like', '%' . request('search') . '%')
+                ->orWhere('hak_pengqurban', 'like', '%' . request('search') . '%')
+                ->orWhere('biaya', 'like', '%' . request('search') . '%')
+                ->orwhere('status_pembayaran', 'like', '%' . request('search') . '%')
+                ->orWhereHas('RTWarga', function ($query) {
+                    $query->where('nomor_RT', 'like', '%' . request('search') . '%');
+                });
+        }
         return view('admin.qurban.kerbau.dashboard', [
-            'qurbans' => $qurbans->paginate(5),
+            'qurbans' => $qurbans->paginate(10),
         ]);
     }
 
