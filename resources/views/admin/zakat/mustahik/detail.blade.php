@@ -50,7 +50,7 @@
                                             Suami</label>
                                         <input type="text" id="jumlah_zakat" disabled
                                             class="block w-full px-0 text-sm text-gray-900 capitalize border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
-                                            placeholder="Jumlah Zakat" value="{{ $mustahik->nama_suami }}" />
+                                            placeholder="nama_suami" value="{{ $mustahik->nama_suami }}" />
                                     </div>
 
                                     <div>
@@ -59,7 +59,7 @@
                                             HP</label>
                                         <input type="text" id="jumlah_zakat" disabled
                                             class="block w-full px-0 text-sm text-gray-900 border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
-                                            placeholder="Jumlah Zakat" value="{{ $mustahik->nomor_hp }}" />
+                                            placeholder="Nomor HP" value="{{ $mustahik->nomor_hp }}" />
                                     </div>
 
 

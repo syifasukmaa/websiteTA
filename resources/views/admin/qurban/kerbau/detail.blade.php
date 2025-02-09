@@ -220,7 +220,7 @@
                                                 Pembayaran</label>
                                             <input type="text" id="status_pembayaran" disabled
                                                 class="block w-full px-0 text-sm text-gray-900 capitalize border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
-                                                placeholder="Jumlah Zakat" value="{{ $qurban->status_pembayaran }}" />
+                                                placeholder="Jumlah Uang" value="{{ $qurban->status_pembayaran }}" />
                                         </div>
 
                                         <div>
