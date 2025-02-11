@@ -55,6 +55,11 @@
                     <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                         <h6 class="mb-2 font-medium text-hijau2">Data Pendaftar Qurban</h6>
                         {{ $qurbans->links() }}
+
+                        <div class="grid gap-4 mt-4 md:grid-cols-3">
+                            <p><span class="font-semibold text-black">Total Uang Qurban Kambing:</span> Rp.
+                                {{ number_format($jumlahUang) }}</p>
+                        </div>
                     </div>
                     <div class="flex-auto px-0 pt-0 pb-2">
                         <div class="p-0 overflow-x-auto">
@@ -82,7 +87,7 @@
                                             RT</th>
                                         <th
                                             class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
-                                            Status Pembayaran</th>
+                                            RW</th>
                                         <th
                                             class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
                                             Aksi
@@ -126,7 +131,7 @@
                                             <td
                                                 class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
-                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->status_pembayaran }}</span>
+                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->RW }}</span>
                                             </td>
 
                                             <td class="flex p-2 align-middle border-b gap-x-2">

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->enum('jenis_hewan', ['kambing', 'domba', 'sapi', 'kerbau']);
             $table->integer('biaya');
             $table->string('status_pembayaran');
+            $table->enum('RW', ['16', '21', 'lainnya']);
             $table->foreignId('pembuatData_id')->constrained(
                 table: 'users',
                 indexName: 'pembuatDataQurban_id'

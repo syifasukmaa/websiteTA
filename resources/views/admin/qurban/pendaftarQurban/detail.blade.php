@@ -93,6 +93,14 @@
                                                 placeholder="Jumlah Zakat" value="{{ $qurban->status_pembayaran }}" />
                                         </div>
                                         <div>
+                                            <label for="RW"
+                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RW
+                                                Warga</label>
+                                            <input type="text" id="RW"
+                                                class="block w-full px-0 text-sm text-gray-900 capitalize border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
+                                                disabled placeholder="Nomor HP" value="{{ $qurban->RW }}" />
+                                        </div>
+                                        <div>
                                             <label for="RT warga"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT
                                                 Warga</label>
@@ -100,6 +108,7 @@
                                                 class="block w-full px-0 text-sm text-gray-900 capitalize border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
                                                 placeholder="RT Warga" value="{{ $qurban->RTWarga->nomor_RT }}" />
                                         </div>
+
                                         <div>
                                             <label for="tanggal_pembayaran"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Tanggal

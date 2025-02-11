@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('r_t_s', function (Blueprint $table) {
             $table->uuid('id_RT')->primary();
-            $table->enum('nomor_RT', ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']);
+            $table->enum('nomor_RT', ['Lainnya', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10']);
             $table->timestamps();
         });
     }

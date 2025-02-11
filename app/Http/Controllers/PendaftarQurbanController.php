@@ -13,6 +13,7 @@ class PendaftarQurbanController extends Controller
     public function index()
     {
         $qurbans = PendaftarQurban::latest();
+        $jumlahUang = PendaftarQurban::sum('biaya');
 
         if (request('search')) {
             $qurbans->where('nama', 'like', '%' . request('search') . '%')
@@ -29,24 +30,29 @@ class PendaftarQurbanController extends Controller
             'admin.qurban.pendaftarQurban.dashboard',
             [
                 'qurbans' => $qurbans->paginate(10),
+                'jumlahUang' => $jumlahUang
             ]
         );
     }
     public function kerbau()
     {
         $qurbans = PengqurbanSapi::latest();
+        $jumlahUang = PengqurbanSapi::sum('biaya');
+
         if (request('search')) {
             $qurbans->where('nama_satu', 'like', '%' . request('search') . '%')
                 ->orWhere('jenis_hewan', 'like', '%' . request('search') . '%')
                 ->orWhere('hak_pengqurban', 'like', '%' . request('search') . '%')
                 ->orWhere('biaya', 'like', '%' . request('search') . '%')
                 ->orwhere('status_pembayaran', 'like', '%' . request('search') . '%')
+                ->orwhere('RW', 'like', '%' . request('search') . '%')
                 ->orWhereHas('RTWarga', function ($query) {
                     $query->where('nomor_RT', 'like', '%' . request('search') . '%');
                 });
         }
         return view('admin.qurban.kerbau.dashboard', [
             'qurbans' => $qurbans->paginate(10),
+            'jumlahUang' => $jumlahUang
         ]);
     }
 
@@ -127,7 +133,7 @@ class PendaftarQurbanController extends Controller
             'tujuan_pahala' => 'required',
             'hak_pengqurban' => 'required',
             'biaya' => 'required',
-            'id_RT' => 'required',
+            'RW' => 'required',
             'status_pembayaran' => 'required',
         ]);
 
@@ -144,6 +150,7 @@ class PendaftarQurbanController extends Controller
         $qurban->tujuan_pahala = $request->tujuan_pahala;
         $qurban->hak_pengqurban = $request->hak_pengqurban;
         $qurban->biaya = $request->biaya;
+        $qurban->RW = $request->RW;
         $qurban->id_RT = $request->id_RT;
         $qurban->status_pembayaran = $request->status_pembayaran;
         $qurban->pembuatData_id = Auth::id();
@@ -186,6 +193,7 @@ class PendaftarQurbanController extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($request->RW);
         $qurban = PendaftarQurban::findOrfail($id);
         if ($qurban) {
             $qurban->update([
@@ -194,6 +202,7 @@ class PendaftarQurbanController extends Controller
                 'tujuan_pahala' => $request->tujuan_pahala,
                 'hak_pengqurban' => $request->hak_pengqurban,
                 'biaya' => $request->biaya,
+                'RW' => $request->RW,
                 'id_RT' => $request->id_RT,
                 'status_pembayaran' => $request->status_pembayaran
             ]);

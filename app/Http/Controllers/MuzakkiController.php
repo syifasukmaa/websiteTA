@@ -12,6 +12,9 @@ class MuzakkiController extends Controller
     public function index()
     {
         $muzakki = Muzakki::with('RTWarga')->latest();
+        $jumlahBeras = Muzakki::sum('beras');
+        $JumlahUangZakat = Muzakki::sum('uang');
+        $JumlahInfaq = Muzakki::sum('infaq');
 
         if (request('search')) {
             $muzakki->where('nama_muzakki', 'like', '%' . request('search') . '%')
@@ -30,6 +33,9 @@ class MuzakkiController extends Controller
 
         return view('admin.zakat.muzakki.dashboard', [
             'zakats' => $muzakki->paginate(10),
+            'jumlahBeras' => $jumlahBeras,
+            'JumlahUangZakat' => $JumlahUangZakat,
+            'JumlahInfaq' => $JumlahInfaq,
         ]);
     }
 

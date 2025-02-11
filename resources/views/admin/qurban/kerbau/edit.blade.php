@@ -237,7 +237,7 @@
                                                 <option value="lunas"
                                                     {{ $qurban->status_pembayaran === 'lunas' ? 'selected' : '' }}>
                                                     Lunas</option>
-                                                <option value="belum bayara"
+                                                <option value="belum bayaran"
                                                     {{ $qurban->status_pembayaran === 'belum bayar' ? 'selected' : '' }}>
                                                     Belum Bayar</option>
                                             </select>

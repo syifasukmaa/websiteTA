@@ -12,6 +12,7 @@ class YatimPiatuController extends Controller
     public function index()
     {
         $yatims = YatimPiatu::with('RTWarga')->latest();
+        $jumlahSantunan = YatimPiatu::sum('biaya');
 
         $user = Auth::user();
 
@@ -32,6 +33,7 @@ class YatimPiatuController extends Controller
         }
         return view('admin.yatimpiatu.dashboard', [
             'yatims' => $yatims->paginate(5),
+            'jumlahSantunan' => $jumlahSantunan,
         ]);
     }
 

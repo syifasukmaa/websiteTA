@@ -24,7 +24,8 @@ class PendaftarQurban extends Model
         'biaya',
         'status_pembayaran',
         'pembuatData_id',
-        'id_RT'
+        'id_RT',
+        'RW'
     ];
 
     protected static function boot()

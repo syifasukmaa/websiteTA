@@ -27,7 +27,7 @@
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban <span class="text-red-500">*</span></label>
                                             <input type="text" id="nama" name="nama"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                class="bg-gray-50 border capitalize border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Nama pengqurban" />
                                             @error('nama')
                                                 <span class="text-red-500">{{ $message }}</span>
@@ -38,7 +38,7 @@
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Tujuan
                                                 Pahala <span class="text-red-500">*</span></label>
                                             <textarea id="tujuan_pahala" name="tujuan_pahala"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-[80px]"
+                                                class="bg-gray-50 border border-gray-300 capitalize text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-[80px]"
                                                 placeholder="Tujuan Pahala"></textarea>
                                             @error('tujuan_pahala')
                                                 <span class="text-red-500">{{ $message }}</span>
@@ -87,8 +87,23 @@
                                                 class="text-slate-700 bg-white border border-slate-400  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                 <option value="lunas">
                                                     Lunas</option>
-                                                <option value="belum bayara">
+                                                <option value="belum bayaran">
                                                     Belum Bayar</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="RW"
+                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RW
+                                                Warga <span class="text-red-500">*</span>
+                                            </label>
+                                            <select id="RW" name="RW"
+                                                class="text-slate-700 bg-white border border-slate-400  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                <option value="16">
+                                                    16</option>
+                                                <option value="21">
+                                                    21</option>
+                                                <option value="lainnya">
+                                                    Lainnya</option>
                                             </select>
                                         </div>
                                         <div>

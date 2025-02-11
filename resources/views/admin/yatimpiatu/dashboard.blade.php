@@ -40,6 +40,11 @@
                     <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                         <h6 class="mb-2 font-medium text-hijau2">Data Yatim Piatu</h6>
                         {{ $yatims->links() }}
+
+                        <div class="grid gap-4 mt-4 md:grid-cols-3">
+                            <p><span class="font-semibold text-black">Total Uang Santunan Yatim Piatu:</span> Rp.
+                                {{ number_format($jumlahSantunan) }}</p>
+                        </div>
                     </div>
                     <div class="flex-auto px-0 pt-0 pb-2">
                         <div class="p-0 overflow-x-auto">

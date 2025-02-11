@@ -111,9 +111,25 @@
                                                 <option value="lunas"
                                                     {{ $qurban->status_pembayaran === 'lunas' ? 'selected' : '' }}>
                                                     Lunas</option>
-                                                <option value="belum bayara"
+                                                <option value="belum bayaran"
                                                     {{ $qurban->status_pembayaran === 'belum bayar' ? 'selected' : '' }}>
                                                     Belum Bayar</option>
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <label for="RW"
+                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RW
+                                                Warga
+                                            </label>
+                                            <select id="RW" name="RW"
+                                                class="text-slate-700 bg-white border border-slate-400  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                <option value="16" {{ $qurban->RW === '16' ? 'selected' : '' }}>
+                                                    16</option>
+                                                <option value="21" {{ $qurban->RW === '21' ? 'selected' : '' }}>
+                                                    21</option>
+                                                <option value="Lainnya" {{ $qurban->RW === 'Lainnya' ? 'selected' : '' }}>
+                                                    Lainnya</option>
                                             </select>
                                         </div>
 
