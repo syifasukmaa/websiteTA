@@ -8,7 +8,7 @@
             class="px-4 py-2 text-base font-medium text-white bg-black rounded-md ">
             &larr; Kembali</a>
     </div>
-    <div class="w-full px-20 mx-auto">
+    <div class="w-full px-4 mx-auto md:px-20">
         <div class="flex flex-wrap -mx-3">
             <div class="flex-none w-full max-w-full px-3">
                 <div

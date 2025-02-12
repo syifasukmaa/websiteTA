@@ -17,7 +17,7 @@
         <ul class="flex flex-col pl-0 mb-0">
             <li class="mt-0.5 w-full">
                 <a class="{{ Request::is('admin/zakat/*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none bg-transparent' }} py-2.7  text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg px-4 text-slate-700 transition-colors"
-                    href="{{ route('admin.muzakki.index') }}">
+                    href="{{ route('zakatMustahik.index') }}">
                     <div
                         class="{{ Request::is('admin/zakat/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5 z-auto">
                         <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"

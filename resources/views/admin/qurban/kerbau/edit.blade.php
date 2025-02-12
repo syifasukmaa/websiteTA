@@ -8,7 +8,7 @@
             class="px-4 py-2 text-base font-medium text-white bg-black rounded-md ">
             &larr; Kembali</a>
     </div>
-    <div class="w-full px-20 mx-auto">
+    <div class="w-full px-4 mx-auto md:px-20">
         <div class="flex flex-wrap -mx-3">
             <div class="flex-none w-full max-w-full px-3">
                 <div
@@ -24,7 +24,7 @@
                                     @csrf
                                     @method('PUT')
 
-                                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                    <div class="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
                                         <div>
                                             <label for="nomor_antrian"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nomor

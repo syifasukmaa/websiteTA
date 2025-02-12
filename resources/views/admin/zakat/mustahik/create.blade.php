@@ -8,7 +8,7 @@
             class="px-4 py-2 text-base font-medium border-2 rounded-md text-hijau1 border-hijau1 ">
             &larr; Kembali</a>
     </div>
-    <div class="w-full px-12 mx-auto">
+    <div class="w-full px-4 mx-auto md:px-12">
         <div class="flex flex-wrap -mx-3">
             <div class="flex-none w-full max-w-full px-3">
                 <div
@@ -21,7 +21,7 @@
                             <div class="dark:bg-gray-700">
                                 <form action="{{ route('zakatMustahik.store') }}" method="POST">
                                     @csrf
-                                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                    <div class="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
                                         <div>
                                             <label for="nama_keluarga"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">

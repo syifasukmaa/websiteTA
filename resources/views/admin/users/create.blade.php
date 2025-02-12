@@ -7,13 +7,13 @@
         <a href="{{ route('pengguna.index') }}" class="px-4 py-2 text-base font-medium text-white bg-black rounded-md ">
             &larr; Kembali</a>
     </div>
-    <div class="w-full px-12 mx-auto">
+    <div class="w-full px-4 mx-auto md:px-12">
         <div class="flex flex-wrap -mx-3">
             <div class="flex-none w-full max-w-full px-3">
                 <div
                     class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid md:px-5 shadow-soft-xl rounded-2xl bg-clip-border">
                     <div class="pb-0 mb-0 bg-white border-b-0 md:p-6 border-b-solid rounded-t-2xl border-b-transparent">
-                        <h6>Detail Data Muzakki</h6>
+                        <h6>Menambah Data Pengguna</h6>
                     </div>
                     <div class="flex-auto px-0 pt-0 pb-2">
                         <div class="p-3 overflow-x-auto md:p-6">
