@@ -23,7 +23,5 @@ class MasjidAtTaubah extends Seeder
         \App\Models\Mustahik::factory(5)->create();
 
         \App\Models\YatimPiatu::factory(5)->create();
-
-        \App\Models\Duafa::factory(5)->create();
     }
 }
