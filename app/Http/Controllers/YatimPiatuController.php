@@ -16,7 +16,7 @@ class YatimPiatuController extends Controller
 
         $user = Auth::user();
 
-        if ($user->role == 'ketua_rt') { // Pastikan user adalah ketua RT
+        if ($user->role == 'ketua_rt') { //User adalah ketua RT
             $yatims->where(function ($query) use ($user) {
                 $query->where('pembuatData_id', $user->id) // Data yang dibuat sendiri
                     ->orWhere('id_RT', $user->id_RT);    // Data dari Ketua RT lain dengan RT yang sama

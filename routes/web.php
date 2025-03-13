@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DuafaController;
 use App\Http\Controllers\MustahikController;
 use App\Http\Controllers\MuzakkiController;
 use App\Http\Controllers\PendaftarQurbanController;
@@ -26,6 +27,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
+    // muzakki
     Route::get('/admin/zakat/muzakki', [MuzakkiController::class, 'index'])->name('admin.muzakki.index');
     Route::get('/admin/zakat/muzakki/create', [MuzakkiController::class, 'create'])->name('admin.muzakki.create');
     Route::post('/admin/zakat/muzakki/add', [MuzakkiController::class, 'store'])->name('admin.muzakki.store');
@@ -34,6 +36,7 @@ Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
     Route::put('/admin/zakat/muzakki/{id}', [MuzakkiController::class, 'update'])->name('admin.muzakki.update');
     Route::delete('/admin/zakat/muzakki/{id}', [MuzakkiController::class, 'delete'])->name('admin.muzakki.delete');
 
+    // mustahik
     Route::get('/admin/zakat/mustahik', [MustahikController::class, 'index'])->name('zakatMustahik.index');
     Route::get('/admin/zakat/mustahik/create', [MustahikController::class, 'create'])->name('zakatMustahik.create');
     Route::get('/admin/zakat/mustahik/{id}', [MustahikController::class, 'detail'])->name('zakatMustahik.detail');
@@ -42,6 +45,7 @@ Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
     Route::put('/admin/zakat/mustahik/{id}', [MustahikController::class, 'update'])->name('zakatMustahik.update');
     Route::delete('/admin/zakat/mustahik/{id}', [MustahikController::class, 'delete'])->name('zakatMustahik.delete');
 
+    // Qurban
     Route::get('/admin/qurban/pendaftarQurban', [PendaftarQurbanController::class, 'index'])->name('pendaftarQurban.index');
     Route::get('/admin/qurban/pendaftarQurban/kerbau', [PendaftarQurbanController::class, 'kerbau'])->name('pendaftarQurban.kerbau');
     Route::get('/admin/qurban/pendaftarQurban/create', [PendaftarQurbanController::class, 'create'])->name('pendaftarQurban.create');
@@ -57,9 +61,7 @@ Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
     Route::delete('/admin/qurban/pendaftarQurban/{id}', [PendaftarQurbanController::class, 'delete'])->name('pendaftarQurban.delete');
     Route::delete('/admin/qurban/pendaftarQurban/kerbau/{id}', [PendaftarQurbanController::class, 'deleteKerbau'])->name('pendaftarQurban.kerbau.delete');
 
-
-
-
+    // Yatim Piatu
     Route::get('/admin/yatimPiatu', [YatimPiatuController::class, 'index'])->name('yatimPiatu.index');
     Route::get('/admin/yatimPiatu/create', [YatimPiatuController::class, 'create'])->name('yatimPiatu.create');
     Route::post('/admin/yatimPiatu/add', [YatimPiatuController::class, 'store'])->name('yatimPiatu.store');
@@ -68,6 +70,16 @@ Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
     Route::put('/admin/yatimPiatu/{id}', [YatimPiatuController::class, 'update'])->name('yatimPiatu.update');
     Route::delete('/admin/yatimPiatu/{id}', [YatimPiatuController::class, 'delete'])->name('yatimPiatu.delete');
 
+    // Duafa
+    Route::get('/admin/duafa', [DuafaController::class, 'index'])->name('duafa.index');
+    Route::get('/admin/duafa/create', [DuafaController::class, 'create'])->name('duafa.create');
+    Route::post('/admin/duafa/add', [DuafaController::class, 'store'])->name('duafa.store');
+    Route::get('/admin/duafa/{id}', [DuafaController::class, 'detail'])->name('duafa.detail');
+    Route::get('/admin/duafa/edit/{id}', [DuafaController::class, 'edit'])->name('duafa.edit');
+    Route::put('/admin/duafa/{id}', [DuafaController::class, 'update'])->name('duafa.update');
+    Route::delete('/admin/duafa/{id}', [DuafaController::class, 'delete'])->name('duafa.delete');
+
+    // Pengguna
     Route::get('/admin/pengguna', [UserController::class, 'index'])->name('pengguna.index');
     Route::get('/admin/pengguna/create', [UserController::class, 'create'])->name('pengguna.create');
     Route::get('/admin/pengguna/{id}', [UserController::class, 'detail'])->name('pengguna.detail');
