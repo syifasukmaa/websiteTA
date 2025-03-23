@@ -21,7 +21,7 @@
                             <div class="dark:bg-gray-700">
                                 <form action="{{ route('zakatMustahik.store') }}" method="POST">
                                     @csrf
-                                    <div class="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
+                                    <div class="grid grid-cols-1 mb-6 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
                                         <div>
                                             <label for="nama_keluarga"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">
