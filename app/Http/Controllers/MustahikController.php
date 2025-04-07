@@ -46,7 +46,6 @@ class MustahikController extends Controller
     {
         $request->validate([
             'nama_keluarga' => 'required',
-            'kelompok' => 'required',
             'alamat' => 'required',
         ]);
 

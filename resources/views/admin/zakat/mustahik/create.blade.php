@@ -39,7 +39,6 @@
                                                 <span class="text-red-500">*</span></label>
                                             <select id="kelompok" name="kelompok"
                                                 class="text-slate-700 bg-white border border-slate-400  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                                <option value="duafa">Duafa</option>
                                                 <option value="fakir miskin">Fakir Miskin</option>
                                                 <option value="fisabilillah">Fisabilillah</option>
                                                 <option value="mualaf">Mualaf</option>

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('mustahiks', function (Blueprint $table) {
             $table->uuid('id_mustahik')->primary();
             $table->string('nama_keluarga')->nullable();
-            $table->enum('kelompok', ['fakir miskin', 'fisabilillah', 'mualaf', 'amilin', 'tidak semua']);
+            $table->enum('kelompok', ['fakir miskin', 'fisabilillah', 'mualaf', 'amilin', 'tidak semua, 'duafa']);
             $table->string('nama_suami')->nullable();
             $table->string('nama_istri')->nullable();
             $table->string('alamat')->nullable();

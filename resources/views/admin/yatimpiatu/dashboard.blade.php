@@ -41,7 +41,7 @@
                         <h6 class="mb-2 font-medium text-hijau2">Data Yatim Piatu</h6>
                         {{ $yatims->links() }}
 
-                        <div class="grid gap-4 mt-4 md:grid-cols-3">
+                        <div class="grid gap-4 mt-4">
                             <p><span class="font-semibold text-black">Total Uang Santunan Yatim Piatu:</span> Rp.
                                 {{ number_format($jumlahSantunan) }}</p>
                         </div>

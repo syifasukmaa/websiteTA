@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nama_ibu');
             $table->string('nama_ayah');
             $table->enum('status', ['yatim', 'piatu']);
-            $table->enum('pendidikan', ['sd', 'smp', 'sma']);
+            $table->enum('pendidikan', ['paud', 'sd', 'smp', 'sma']);
             $table->integer('biaya');
             $table->text('alamat');
             $table->foreignId('pembuatData_id')->constrained(
