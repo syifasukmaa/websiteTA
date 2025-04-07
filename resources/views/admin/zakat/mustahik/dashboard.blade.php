@@ -71,7 +71,10 @@
 
                                         <th
                                             class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
-                                            Alamat</th>
+                                            Nama Suami</th>
+                                        <th
+                                            class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
+                                            Nama Istri</th>
                                         <th
                                             class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
                                             Aksi
@@ -100,7 +103,12 @@
                                             <td
                                                 class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
-                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $mustahik->alamat }}</span>
+                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $mustahik->nama_suami }}</span>
+                                            </td>
+                                            <td
+                                                class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+                                                <span
+                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $mustahik->nama_istri }}</span>
                                             </td>
 
                                             <td class="flex p-2 align-middle border-b gap-x-2">
