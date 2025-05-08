@@ -92,7 +92,7 @@ class MuzakkiController extends Controller
         $zakat = Muzakki::findOrfail($id);
         if ($zakat) {
             $zakat->update([
-                'nama_muzakaki' => $request->nama_muzakki,
+                'nama_muzakki' => $request->nama_muzakki,
                 'jumlah_jiwa' => $request->jumlah_jiwa,
                 'beras' => $request->beras,
                 'uang' => $request->uang,
