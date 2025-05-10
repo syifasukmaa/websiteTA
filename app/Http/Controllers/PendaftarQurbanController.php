@@ -108,6 +108,7 @@ class PendaftarQurbanController extends Controller
         $qurban->pahala_tujuh = $request->pahala_tujuh;
         $qurban->biaya = $request->biaya;
         $qurban->id_RT = $request->id_RT;
+        $qurban->jenis_hewan = $request->jenis_hewan;
         $qurban->hak_pengqurban = $request->hak_pengqurban;
         $qurban->status_pembayaran = $request->status_pembayaran;
         $qurban->pembuatData_id = Auth::id();
@@ -214,6 +215,7 @@ class PendaftarQurbanController extends Controller
 
     public function updateKerbau(Request $request, $id)
     {
+        dd($request->all());
         $qurban = PengqurbanSapi::findOrfail($id);
         if ($qurban) {
             $qurban->update([

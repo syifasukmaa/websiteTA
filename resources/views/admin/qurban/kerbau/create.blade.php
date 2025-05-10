@@ -193,10 +193,7 @@
                                                 <option value="sapi">
                                                     Sapi</option>
                                                 <option value="kerbau">
-                                                    kerbau</option>
-                                                <option value="kambing">Kambing</option>
-                                                <option value="domba">
-                                                    Domba</option>
+                                                    Kerbau</option>
                                             </select>
                                         </div>
                                         <div>
