@@ -99,6 +99,8 @@ class MuzakkiController extends Controller
                 'infaq' => $request->infaq,
                 'alamat' => $request->alamat,
                 'keterangan' => $request->keterangan,
+                'id_RT' => $request->id_RT,
+
             ]);
         }
 

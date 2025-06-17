@@ -52,6 +52,14 @@
                                                 class="block w-full px-0 text-sm text-gray-900 capitalize border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
                                                 placeholder="nama_suami" value="{{ $mustahik->nama_suami }}" />
                                         </div>
+                                        <div>
+                                            <label for="jumlah_zakat"
+                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT
+                                                Warga</label>
+                                            <input type="text" id="jumlah_zakat" disabled
+                                                class="block w-full px-0 text-sm text-gray-900 capitalize border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
+                                                placeholder="nama_suami" value="{{ $mustahik->RTWarga->nomor_RT }}" />
+                                        </div>
 
                                         <div>
                                             <label for="jumlah_zakat"

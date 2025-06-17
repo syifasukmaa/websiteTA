@@ -21,6 +21,7 @@ class Mustahik extends Model
         'kelompok',
         'nama_suami',
         'nama_istri',
+        'id_RT',
         'alamat',
         'nomor_hp',
     ];
@@ -39,5 +40,9 @@ class Mustahik extends Model
     public function pembuatData(): BelongsTo
     {
         return $this->belongsTo(User::class, 'pembuatData_id');
+    }
+    public function RTWarga(): BelongsTo
+    {
+        return $this->belongsTo(RT::class, 'id_RT', 'id_RT');
     }
 }

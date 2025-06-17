@@ -5,6 +5,7 @@
     @endphp
 
     <div class="w-full px-6 py-6 mx-auto">
+        {{-- @include('sweetalert::alert') --}}
         <div class="flex flex-wrap -mx-3">
             <div class="flex-none w-full max-w-full px-3">
                 <div class="flex justify-between">
@@ -75,6 +76,11 @@
                                         <th
                                             class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
                                             Nama Istri</th>
+
+                                        <th
+                                            class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
+                                            RT</th>
+
                                         <th
                                             class="px-6 py-3 text-sm font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none border-b-solid tracking-none whitespace-nowrap text-slate-800 opacity-70">
                                             Aksi
@@ -109,6 +115,11 @@
                                                 class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
                                                     class="text-sm font-semibold leading-tight text-slate-800">{{ $mustahik->nama_istri }}</span>
+                                            </td>
+                                            <td
+                                                class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+                                                <span
+                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $mustahik->RTWarga->nomor_RT }}</span>
                                             </td>
 
                                             <td class="flex p-2 align-middle border-b gap-x-2">
@@ -199,6 +210,7 @@
             </div>
         </div>
     </div>
+
 
     {{-- confirmation delete --}}
     {{-- <script>

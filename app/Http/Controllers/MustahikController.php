@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mustahik;
+use App\Models\RT;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MustahikController extends Controller
 {
@@ -33,13 +35,16 @@ class MustahikController extends Controller
 
         return view('admin.zakat.mustahik.dashboard', [
             'mustahiks' => $mustahik->paginate(5),
+            'rt' => RT::all(),
         ]);
     }
 
     public function create()
     {
 
-        return view('admin.zakat.mustahik.create');
+        return view('admin.zakat.mustahik.create', [
+            'rt' => RT::all(),
+        ]);
     }
 
     public function store(Request $request)
@@ -58,9 +63,11 @@ class MustahikController extends Controller
         $mustahik->nama_suami = $request->nama_suami;
         $mustahik->nomor_hp = $request->nomor_hp;
         $mustahik->pembuatData_id = Auth::id();
+        $mustahik->id_RT = $request->id_RT;
         $mustahik->save();
 
         session()->flash('success', 'Data mustahik ' . $mustahik->nama_keluarga . ' berhasil ditambahkan');
+        // Alert::success('success', 'Data mustahik ' . $mustahik->nama_keluarga . ' berhasil ditambahkan');
         return redirect()->route('zakatMustahik.index');
     }
     public function detail($id)
@@ -72,7 +79,8 @@ class MustahikController extends Controller
     public function edit($id)
     {
         return view('admin.zakat.mustahik.edit', [
-            'mustahik' => Mustahik::where('id_mustahik', $id)->first()
+            'mustahik' => Mustahik::where('id_mustahik', $id)->first(),
+            'rt' => RT::all()
         ]);
     }
 
@@ -86,10 +94,13 @@ class MustahikController extends Controller
                 'kelompok' => $request->kelompok,
                 'nama_istri' => $request->nama_istri,
                 'nama_suami' => $request->nama_suami,
+                'id_RT' => $request->id_RT,
                 'nomor_hp' => $request->nomor_hp,
                 'alamat' => $request->alamat,
             ]);
         }
+
+        // dd($request->all());
 
         session()->flash('success', 'Data mustahik ' . $mustahik->nama_keluarga . ' berhasil diubah');
         return redirect()->route('zakatMustahik.index');
@@ -102,6 +113,7 @@ class MustahikController extends Controller
         }
 
         session()->flash('success', 'Data mustahik ' . $mustahik->nama_keluarga . ' berhasil dihapus');
+        // Alert::success('Success Title', 'Data mustahik ' . $mustahik->nama_keluarga . ' berhasil dihapus');
         return redirect()->route('zakatMustahik.index');
     }
 }
