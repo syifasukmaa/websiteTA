@@ -11,7 +11,7 @@ class YatimPiatuController extends Controller
 {
     public function index()
     {
-        $yatims = YatimPiatu::with('RTWarga')->get();
+        $yatims = YatimPiatu::with('RTWarga')->oldest();
         $jumlahSantunan = YatimPiatu::sum('biaya');
 
         $user = Auth::user();
