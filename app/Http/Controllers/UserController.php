@@ -46,7 +46,7 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->role = $request->role;
         $user->email = $request->email;
-        $user->id_rt = $request->id_rt;
+        $user->id_RT = $request->id_RT;
         $user->save();
 
         session()->flash('success', 'Data user ' . $user->name . ' berhasil diubah');
