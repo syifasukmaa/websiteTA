@@ -17,7 +17,8 @@ class MustahikController extends Controller
         $user = Auth::user();
 
         if ($user->role == 'ketua_rt') { // Pastikan user adalah ketua RT
-            $mustahik->where('pembuatData_id', $user->id);
+            $mustahik->where('pembuatData_id', $user->id)
+                ->orWhere('id_RT', $user->id_RT);
         }
 
         if (request('search')) {
