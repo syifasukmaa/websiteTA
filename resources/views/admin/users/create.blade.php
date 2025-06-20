@@ -21,40 +21,15 @@
                                 <form action="{{ route('pengguna.store') }}" method="POST">
                                     @csrf
                                     <div class="grid gap-6 mb-6 md:grid-cols-2">
-                                        <div>
-                                            <label for="name"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">
-                                                Nama Pengguna <span class="text-red-500">*</span></label>
-                                            <input type="text" id="name" name="name"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="nama Pengguna" required />
-                                        </div>
-                                        <div>
-                                            <label for="email"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Email
-                                                <span class="text-red-500">*</span>
-                                            </label>
-                                            <input type="text" id="email" name="email"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="email pengguna" required />
-                                        </div>
-                                        <div>
-                                            <label for="password"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Password
-                                                <span class="text-red-500">*</span></label>
-                                            <input type="password" id="password" name="password"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="password" required />
-                                        </div>
-                                        <div>
-                                            <label for="confirmation_password"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Konfirmasi
-                                                Password
-                                                <span class="text-red-500">*</span></label>
-                                            <input type="password" id="confirmation_password" name="confirmation_password"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="confirmation password" required />
-                                        </div>
+                                        <x-input-field name="name" label="Nama Pengguna"
+                                            placeholder="Masukkan nama pengguna" :required="true" />
+                                        <x-input-field name="email" label="Email" placeholder="Masukkan email pengguna"
+                                            :required="true" />
+                                        <x-input-field name="password" label="Password"
+                                            placeholder="Masukkan password pengguna" :required="true" type="password" />
+                                        <x-input-field name="confirmation_password" label="Confirmation Password"
+                                            placeholder="Masukkan konfirmasi password pengguna" :required="true"
+                                            type="password" />
                                         <div>
                                             <label for="role"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Role
@@ -76,7 +51,7 @@
                                                 Warga <span class="text-red-500">*</span>
                                             </label>
                                             <select id="id_RT" name="id_RT"
-                                                class="text-slate-700 bg-white border border-slate-400  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                class="text-slate-700 bg-white border border-slate-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                 @foreach ($rt as $rtwarga)
                                                     <option value="{{ $rtwarga->id_RT }}">
                                                         {{ $rtwarga->nomor_RT }}</option>

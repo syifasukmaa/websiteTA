@@ -22,17 +22,8 @@
                                 <form action="{{ route('zakatMustahik.store') }}" method="POST">
                                     @csrf
                                     <div class="grid grid-cols-1 mb-6 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
-                                        <div>
-                                            <label for="nama_keluarga"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">
-                                                Nama Keluarga <span class="text-red-500">*</span></label>
-                                            <input type="text" id="nama_keluarga" name="nama_keluarga"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="masukkan nama keluarga" />
-                                            @error('nama_keluarga')
-                                                <span class="text-red-500">{{ $message }}</span>
-                                            @enderror
-                                        </div>
+                                        <x-input-field name="nama_keluarga" label=" Nama Keluarga"
+                                            placeholder="Masukkan Nama Keluarga" :required="true" />
                                         <div>
                                             <label for="kelompok"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Kelompok
@@ -48,25 +39,11 @@
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
                                         </div>
+                                        <x-input-field name="nama_istri" label="Nama Istri"
+                                            placeholder="Masukkan Nama Istri" />
 
-                                        <div>
-                                            <label for="nama_istri"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
-                                                Istri
-                                            </label>
-                                            <input type="text" id="nama_istri" name="nama_istri"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="isi nama istri" />
-                                        </div>
-                                        <div>
-                                            <label for="nama_suami"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
-                                                Suami
-                                            </label>
-                                            <input type="text" id="nama_suami" name="nama_suami"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="isi nama suami" />
-                                        </div>
+                                        <x-input-field name="nama_suami" label="Nama Suami"
+                                            placeholder="Masukkan Nama Suami" />
                                         <div>
                                             <label for="id_RT"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT
@@ -80,26 +57,12 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div>
-                                            <label for="alamat"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Alamat
-                                                Mustahik <span class="text-red-500">*</span>
-                                            </label>
-                                            <textarea id="alamat" name="alamat"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Isi Alamat Mustahik"></textarea>
-                                            @error('alamat')
-                                                <span class="text-red-500">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                        <div>
-                                            <label for="nomor_hp"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">No
-                                                Tlp</label>
-                                            <input type="number" id="nomor_hp" name="nomor_hp"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="nomor hp" />
-                                        </div>
+
+                                        <x-textarea name="alamat" label="Alamat Mustahik" placeholder="Isi Alamat Mustahik"
+                                            :required="true" />
+                                        <x-input-field name="nomor_hp" label="No Tlp" placeholder="Masukkan Nama Istri"
+                                            type="number" />
+
                                     </div>
                                     <button type="submit"
                                         class="text-white bg-hijau2 hover:bg-hijau1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tambah</button>

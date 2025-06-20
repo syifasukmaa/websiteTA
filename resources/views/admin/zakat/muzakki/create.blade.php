@@ -22,7 +22,7 @@
                                 <form action="{{ route('admin.muzakki.store') }}" method="POST">
                                     @csrf
                                     <div class="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
-                                        <div>
+                                        {{-- <div>
                                             <label for="nama_muzakki"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white ">
                                                 Nama Muzazkki <span class="text-red-500">*</span></label>
@@ -32,8 +32,12 @@
                                             @error('nama_muzakki')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="nama_muzakki" label=" Nama Muzakki"
+                                            placeholder="Masukkan Nama Muzakki" :required="true" />
+                                        <x-input-field name="jumlah_jiwa" label="Jumlah Jiwa"
+                                            placeholder="Masukkan Jumlah Jiwa" :required="true" type="number" />
+                                        {{-- <div>
                                             <label for="Jumlah jiwa"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Jumlah
                                                 Jiwa <span class="text-red-500">*</span>
@@ -44,31 +48,23 @@
                                             @error('jumlah_jiwa')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        {{-- <div>
                                             <label for="Uang"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Uang
                                                 (Rp)</label>
                                             <input type="number" id="Uang" name="uang"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Uang" />
-                                        </div>
-                                        <div>
-                                            <label for="beras"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Beras
-                                                (Liter)</label>
-                                            <input type="number" id="beras" name="beras"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="beras" />
-                                        </div>
-                                        <div>
-                                            <label for="infaq"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Infaq
-                                                (Rp)</label>
-                                            <input type="number" id="infaq" name="infaq"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="infaq" />
-                                        </div>
+                                        </div> --}}
+                                        <x-input-field name="uang" label="Uang (Rp)" placeholder="Masukkan Nominal Uang"
+                                            type="number" />
+                                        <x-input-field name="beras" label="Beras (Liter) "
+                                            placeholder="Masukkan Jumlah Beras" type="number" />
+
+                                        <x-input-field name="infaq" label="Infaq (Rp)" placeholder="Masukkan Jumlah Infaq"
+                                            type="number" />
+
                                         <div>
                                             <label for="id_RT"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT
@@ -85,30 +81,35 @@
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
                                         </div>
-                                        <div>
-                                            <label for="alamat"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Alamat
-                                                Muzakki <span class="text-red-500">*</span>
-                                            </label>
-                                            <textarea id="alamat" name="alamat"
-                                                class="bg-gray-50 capitalize border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Alamat Muzakki"></textarea>
-                                            @error('alamat')
-                                                <span class="text-red-500">{{ $message }}</span>
-                                            @enderror
-                                        </div>
+                                        <x-textarea name="alamat" label="Alamat Muzakki" placeholder="Isi Alamat Muzakki"
+                                            :required="true" />
+                                        {{-- <div>
+                                        <label for="alamat"
+                                            class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Alamat
+                                            Muzakki <span class="text-red-500">*</span>
+                                        </label>
+                                        <textarea id="alamat" name="alamat"
+                                            class="bg-gray-50 capitalize border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Alamat Muzakki"></textarea>
+                                        @error('alamat')
+                                            <span class="text-red-500">{{ $message }}</span>
+                                        @enderror
+                                    </div> --}}
 
-                                        <div>
-                                            <label for="keterangan"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Keterangan</label>
-                                            <textarea type="tel" id="keterangan" name="keterangan"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Tidak wajib diisi"></textarea>
-                                        </div>
+                                        {{-- <div>
+                                        <label for="keterangan"
+                                            class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Keterangan</label>
+                                        <textarea type="tel" id="keterangan" name="keterangan"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Tidak wajib diisi"></textarea>
+                                    </div> --}}
+                                        <x-textarea name="keterangan" label="Keterangan"
+                                            placeholder="Isi Jika Ada Keterangan" />
+                                    </div>
 
 
-                                        <button type="submit"
-                                            class="text-white bg-hijau2 hover:bg-hijau1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tambah</button>
+                                    <button type="submit"
+                                        class="text-white bg-hijau2 hover:bg-hijau1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tambah</button>
                                 </form>
 
                             </div>

@@ -22,7 +22,7 @@
                                 <form action="{{ route('yatimPiatu.store') }}" method="POST">
                                     @csrf
                                     <div class="grid gap-6 mb-6 md:grid-cols-2">
-                                        <div>
+                                        {{-- <div>
                                             <label for="nama"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white ">
                                                 Nama Yatim Piatu <span class="text-red-500">*</span></label>
@@ -32,8 +32,12 @@
                                             @error('nama')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="nama" label=" Nama Yatim Piatu" placeholder="Masukkan Nama"
+                                            :required="true" />
+                                        <x-input-field name="nama_ibu" label=" Nama Ibu" placeholder="Masukkan Nama Ibu"
+                                            :required="true" />
+                                        {{-- <div>
                                             <label for="nama_ibu"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Ibu<span class="text-red-500">*</span>
@@ -44,8 +48,8 @@
                                             @error('nama_ayah')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        {{-- <div>
                                             <label for="nama_ayah"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Ayah<span class="text-red-500">*</span>
@@ -56,7 +60,9 @@
                                             @error('nama_ayah')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
+                                        </div> --}}
+                                        <x-input-field name="nama_ayah" label=" Nama Ayah" placeholder="Masukkan Nama Ayah"
+                                            :required="true" />
                                         <div>
                                             <label for="status"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Status
@@ -74,7 +80,7 @@
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
                                         </div>
-                                        <div>
+                                        {{-- <div>
                                             <label for="biaya"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">biaya
                                                 <span class="text-red-500">*</span>
@@ -85,7 +91,10 @@
                                             @error('biaya')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
+                                        </div> --}}
+
+                                        <x-input-field name="biaya" label="Biaya (Rp)"
+                                            placeholder="Masukkan Jumlah Biaya Santunan" :required="true" />
 
                                         <div>
                                             <label for="pendidikan"
@@ -108,7 +117,7 @@
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
                                         </div>
-                                        <div>
+                                        {{-- <div>
                                             <label for="alamat"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Alamat
                                                 Yatim Piatu<span class="text-red-500">*</span>
@@ -119,7 +128,9 @@
                                             @error('alamat')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
+                                        </div> --}}
+                                        <x-textarea name="alamat" label="Alamat Yatim Piatu"
+                                            placeholder="Isi Alamat Yatim Piatu" :required="true" />
                                         <div>
                                             <label for="id_RT"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT

@@ -79,7 +79,7 @@
                 </a>
             </li>
             <li class="mt-0.5 w-full">
-                <a class="{{ Request::is('admin/duafa*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm rounded-lg ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
+                <a class="{{ Request::is('admin/duafa*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm rounded-lg ease-nav-brand my-0 mx-4 items-center whitespace-nowrap px-4 transition-colors text-slate-700 hidden"
                     href="{{ route('duafa.index') }}">
                     <div
                         class="{{ Request::is('admin/duafa*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
