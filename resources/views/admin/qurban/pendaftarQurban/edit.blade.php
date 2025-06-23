@@ -25,14 +25,16 @@
                                     @method('PUT')
 
                                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                        <div>
+                                        {{-- <div>
                                             <label for="nama"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban</label>
                                             <input type="text" id="nama" name="nama"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Nama pengqurban" value="{{ $qurban->nama }}" />
-                                        </div>
+                                        </div> --}}
+                                        <x-input-field name="nama" label=" Nama Pengqurban"
+                                            placeholder="Masukkan Nama Pengqurban" value="{{ $qurban->nama }}" />
 
                                         <div>
                                             <label for="nomor_antrian"
@@ -54,14 +56,16 @@
                                                     placeholder="Tujuan Pahala">{{ $qurban->tujuan_pahala }}</textarea>
                                             </div>
                                         @else
-                                            <div>
+                                            {{-- <div>
                                                 <label for="tujuan_pahala"
                                                     class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Tujuan
                                                     Pahala</label>
                                                 <input type="text" id="tujuan_pahala" name="tujuan_pahala"
                                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                     placeholder="Tujuan Pahala" value="{{ $qurban->tujuan_pahala }}" />
-                                            </div>
+                                            </div> --}}
+                                            <x-input-field name="tujuan_pahala" label="Tujuan Pahala"
+                                                placeholder="Masukkan Tujuan Pahala" value="{{ $qurban->tujuan_pahala }}" />
                                         @endif
                                         <div>
                                             <label for="jenis_hewan"
@@ -70,12 +74,6 @@
                                             </label>
                                             <select id="jenis_hewan" name="jenis_hewan"
                                                 class="text-slate-700 bg-white border border-slate-400  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                                <option value="sapi"
-                                                    {{ $qurban->jenis_hewan == 'sapi' ? 'selected' : '' }}>
-                                                    Sapi</option>
-                                                <option value="kerbau"
-                                                    {{ $qurban->jenis_hewan == 'kerbau' ? 'selected' : '' }}>
-                                                    kerbau</option>
                                                 <option value="kambing"
                                                     {{ $qurban->jenis_hewan == 'kambing' ? 'selected' : '' }}>Kambing
                                                 </option>
@@ -84,23 +82,26 @@
                                                     Domba</option>
                                             </select>
                                         </div>
-                                        <div>
+                                        {{-- <div>
                                             <label for="hak_pengqurban"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Hak
                                                 Pengqurban</label>
                                             <input type="text" id="hak_pengqurban" name="hak_pengqurban"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Hak Pengqurban" value="{{ $qurban->hak_pengqurban }}" />
-                                        </div>
-
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="hak_pengqurban" label="Hak Pengqurban"
+                                            placeholder="Masukkan Hak Pengqurban" value="{{ $qurban->hak_pengqurban }}" />
+                                        {{-- <div>
                                             <label for="biaya"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Biaya
                                                 Pembayaran</label>
                                             <input type="text" id="biaya" name="biaya"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Jumlah Zakat" value="{{ $qurban->biaya }}" />
-                                        </div>
+                                        </div> --}}
+                                        <x-input-field name="biaya" label=" Biaya Pembayaran" type="number"
+                                            placeholder="Masukkan Biaya Pendaftaran" value="{{ $qurban->biaya }}" />
                                         <div>
                                             <label for="status_pembayaran"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Status

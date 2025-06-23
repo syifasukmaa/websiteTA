@@ -48,7 +48,7 @@
                                                     kerbau</option>
                                             </select>
                                         </div>
-                                        <div>
+                                        {{-- <div>
                                             <label for="nama_satu"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban 1
@@ -59,8 +59,12 @@
                                             @error('nama_satu')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="nama_satu" label=" Nama Pengqurban"
+                                            placeholder="Masukkan Nama Pengqurban 1" value="{{ $qurban->nama_satu }}" />
+                                        <x-input-field name="pahala_satu" label=" Tujuan Pahala"
+                                            placeholder="Masukkan Tujuan Pahala" value="{{ $qurban->pahala_satu }}" />
+                                        {{-- <div>
                                             <label for="pahala_satu"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Tujuan
                                                 Pahala 1<span class="text-red-500">*</span></label>
@@ -70,8 +74,8 @@
                                             @error('pahala_satu')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        {{-- <div>
                                             <label for="nama_dua"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban 2
@@ -82,8 +86,12 @@
                                             @error('nama_dua')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="nama_dua" label=" Nama Pengqurban 2"
+                                            placeholder="Masukkan Nama Pengqurban 2" value="{{ $qurban->nama_dua }}" />
+                                        <x-input-field name="pahala_dua" label=" Tujuan Pahala 2"
+                                            placeholder="Masukkan Tujuan Pahala 2" value="{{ $qurban->pahala_dua }}" />
+                                        {{-- <div>
                                             <label for="pahala_dua"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Tujuan
                                                 Pahala 2<span class="text-red-500">*</span></label>
@@ -93,8 +101,8 @@
                                             @error('pahala_dua"')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        {{-- <div>
                                             <label for="nama_tiga"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban 3
@@ -105,8 +113,8 @@
                                             @error('nama_tiga')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        {{-- <div>
                                             <label for="pahala_tiga"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Tujuan
                                                 Pahala 3<span class="text-red-500">*</span></label>
@@ -116,8 +124,12 @@
                                             @error('pahala_tiga')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="nama_tiga" label=" Nama Pengqurban 3"
+                                            placeholder="Masukkan Nama Pengqurban 3" value="{{ $qurban->nama_tiga }}" />
+                                        <x-input-field name="pahala_tiga" label=" Tujuan Pahala 3"
+                                            placeholder="Masukkan Tujuan Pahala 3" value="{{ $qurban->pahala_tiga }}" />
+                                        {{-- <div>
                                             <label for="nama_empat"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban 4
@@ -139,8 +151,12 @@
                                             @error('pahala_empat')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="nama_empat" label=" Nama Pengqurban 4"
+                                            placeholder="Masukkan Nama Pengqurban 4" value="{{ $qurban->nama_empat }}" />
+                                        <x-input-field name="pahala_empat" label=" Tujuan Pahala 4"
+                                            placeholder="Masukkan Tujuan Pahala 4" value="{{ $qurban->pahala_empat }}" />
+                                        {{-- <div>
                                             <label for="nama_lima"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban 5
@@ -162,8 +178,16 @@
                                             @error('pahala_lima')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        <x-input-field name="nama_lima" label=" Nama Pengqurban 5"
+                                            placeholder="Masukkan Nama Pengqurban 5" value="{{ $qurban->nama_lima }}" />
+                                        <x-input-field name="pahala_lima" label=" Tujuan Pahala 5"
+                                            placeholder="Masukkan Tujuan Pahala 5" value="{{ $qurban->pahala_lima }}" />
+                                        <x-input-field name="nama_enam" label=" Nama Pengqurban 6"
+                                            placeholder="Masukkan Nama Pengqurban 6" value="{{ $qurban->nama_enam }}" />
+                                        <x-input-field name="pahala_enam" label=" Tujuan Pahala 6"
+                                            placeholder="Masukkan Tujuan Pahala 6" value="{{ $qurban->pahala_enam }}" />
+                                        {{-- <div>
                                             <label for="nama_enam"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban 6
@@ -185,8 +209,8 @@
                                             @error('pahala_enam"')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
-                                        <div>
+                                        </div> --}}
+                                        {{-- <div>
                                             <label for="nama_tujuh"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
                                                 Pengqurban 7
@@ -208,25 +232,35 @@
                                             @error('pahala_tujuh')
                                                 <span class="text-red-500">{{ $message }}</span>
                                             @enderror
-                                        </div>
+                                        </div> --}}
+                                        <x-input-field name="nama_tujuh" label=" Nama Pengqurban 7"
+                                            placeholder="Masukkan Nama Pengqurban 7" value="{{ $qurban->nama_tujuh }}" />
+                                        <x-input-field name="pahala_tujuh" label=" Tujuan Pahala 7"
+                                            placeholder="Masukkan Tujuan Pahala 7" value="{{ $qurban->pahala_tujuh }}" />
+                                        <x-input-field name="hak_pengqurban" label=" Hak Pengqurban"
+                                            placeholder="Masukkan Hak Pengqurban" value="{{ $qurban->hak_pengqurban }}" />
 
-                                        <div>
+
+                                        {{-- <div>
                                             <label for="hak_pengqurban"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Hak
                                                 Pengqurban</label>
                                             <input type="text" id="hak_pengqurban" name="hak_pengqurban"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Hak Pengqurban" value="{{ $qurban->hak_pengqurban }}" />
-                                        </div>
+                                        </div> --}}
 
-                                        <div>
+                                        {{-- <div>
                                             <label for="biaya"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Biaya
                                                 Pembayaran</label>
                                             <input type="text" id="biaya" name="biaya"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Jumlah Biaya" value="{{ $qurban->biaya }}" />
-                                        </div>
+                                        </div> --}}
+                                        <x-input-field name="biaya" label="Biaya Pendaftaran"
+                                            placeholder="Masukkan Jumlah Biaya" value="{{ $qurban->biaya }}"
+                                            type="number" />
                                         <div>
                                             <label for="status_pembayaran"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Status

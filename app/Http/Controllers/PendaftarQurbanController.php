@@ -215,7 +215,7 @@ class PendaftarQurbanController extends Controller
 
     public function updateKerbau(Request $request, $id)
     {
-        dd($request->all());
+        // dd($request->all());
         $qurban = PengqurbanSapi::findOrfail($id);
         if ($qurban) {
             $qurban->update([

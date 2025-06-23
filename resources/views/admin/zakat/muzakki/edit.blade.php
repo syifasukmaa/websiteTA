@@ -23,46 +23,19 @@
                                     @csrf
                                     @method('PUT')
                                     <div class="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
-                                        <div>
-                                            <label for="nama_muzakki"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
-                                                Keluarga</label>
-                                            <input type="text" id="nama_muzakki"
-                                                class="bg-gray-50 border capitalize border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Masukkan Nama" name="nama_muzakki"
-                                                value="{{ $zakat->nama_muzakki }}" />
-                                        </div>
-                                        <div>
-                                            <label for="jumlah_jiwa"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Jumlah
-                                                Jiwa</label>
-                                            <input type="text" id="jumlah_jiwa"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="John" name="jumlah_jiwa" value="{{ $zakat->jumlah_jiwa }}" />
-                                        </div>
-                                        <div>
-                                            <label for="uang"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Uang
-                                                (Rp)</label>
-                                            <input type="text" id="uang"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="jumlah uang" name="uang" value="{{ $zakat->uang }}" />
-                                        </div>
-                                        <div>
-                                            <label for="beras"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Beras
-                                                (Liter)</label>
-                                            <input type="text" id="beras"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Jumlah beras" name="beras" value="{{ $zakat->beras }}" />
-                                        </div>
-                                        <div>
-                                            <label for="infaq"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Infaq</label>
-                                            <input type="text" id="infaq"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Jumlah infaq" name="infaq" value="{{ $zakat->infaq }}" />
-                                        </div>
+
+                                        <x-input-field name="nama_muzakki" label=" Nama Muzakki"
+                                            placeholder="Masukkan Nama Muzakki" value="{{ $zakat->nama_muzakki }}" />
+                                        <x-input-field name="jumlah_jiwa" label="Jumlah Jiwa"
+                                            placeholder="Masukkan Jumlah Jiwa" value="{{ $zakat->jumlah_jiwa }}" />
+
+                                        <x-input-field name="uang" label="Uang (Rp)" placeholder="Masukkan Jumlah Uang"
+                                            value="{{ $zakat->uang }}" />
+                                        <x-input-field name="beras" label="Beras" placeholder="Masukkan Jumlah Beras"
+                                            value="{{ $zakat->nama_istri }}" />
+
+                                        <x-input-field name="infaq" label="Infaq" placeholder="Masukkan Nama Istri"
+                                            value="{{ $zakat->infaq }}" />
                                         <div>
                                             <label for="id_RT"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT
@@ -88,15 +61,8 @@
                                                 value="{{ date('d-m-Y', strtotime($zakat->created_at)) }}" />
                                         </div>
 
-                                        <div>
-                                            <label for="alamat"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Alamat
-                                                Muzakki</label>
-                                            <textarea id="alamat"
-                                                class="bg-gray-50 border capitalize border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Alamat Muzakki" name="alamat">{{ $zakat->alamat }}</textarea>
-                                        </div>
-
+                                        <x-textarea name="alamat" label="Alamat Muzakki" placeholder="Isi Alamat Muzakki"
+                                            value="{{ $zakat->alamat }}" />
                                         <div>
                                             <label for="penerima_id"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Penerima
@@ -106,13 +72,10 @@
                                                 placeholder="Tanggal Pembayaran" disabled
                                                 value="{{ $zakat->penerimaZakat->name }}" />
                                         </div>
-                                        <div>
-                                            <label for="keterangan"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Keterangan</label>
-                                            <textarea id="keterangan"
-                                                class="bg-gray-50 border capitalize border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-[100px] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Deskripsi Zakat" name="keterangan">{{ $zakat->keterangan }}</textarea>
-                                        </div>
+
+                                        <x-textarea name="keterangan" label="Keterangan" placeholder="Isi Keterangan"
+                                            value="{{ $zakat->keterangan }}" />
+
                                     </div>
 
                                     <div class="col-span-4 mt-5">

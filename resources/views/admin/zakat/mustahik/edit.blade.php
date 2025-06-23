@@ -24,14 +24,10 @@
                                     @csrf
                                     @method('PUT')
                                     <div class="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
-                                        <div>
-                                            <label for="nama_keluarga"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
-                                                Keluarga</label>
-                                            <input type="text" id="nama_keluarga" name="nama_keluarga"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="John" value="{{ $mustahik->nama_keluarga }}" />
-                                        </div>
+
+                                        <x-input-field name="nama_keluarga" label=" Nama Keluarga"
+                                            placeholder="Masukkan Nama Keluarga" :required="true"
+                                            value="{{ $mustahik->nama_keluarga }}" />
                                         <div>
                                             <label for="kelompok"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Kelompok
@@ -57,22 +53,11 @@
                                                     Amilin</option>
                                             </select>
                                         </div>
-                                        <div>
-                                            <label for="nama_istri"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
-                                                Istri</label>
-                                            <input type="text" id="nama_istri" name="nama_istri"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Nama Istri" value="{{ $mustahik->nama_istri }}" />
-                                        </div>
-                                        <div>
-                                            <label for="nama_suami"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama
-                                                Suami</label>
-                                            <input type="text" id="nama_suami" name="nama_suami"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Nama Suami" value="{{ $mustahik->nama_suami }}" />
-                                        </div>
+
+                                        <x-input-field name="nama_istri" label=" Nama Istri"
+                                            placeholder="Masukkan Nama Istri" value="{{ $mustahik->nama_istri }}" />
+                                        <x-input-field name="nama_suami" label=" Nama Suami"
+                                            placeholder="Masukkan Nama Suami" value="{{ $mustahik->nama_suami }}" />
                                         <div>
                                             <label for="id_RT"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT
@@ -87,24 +72,11 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div>
-                                            <label for="nomor_hp"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nomor
-                                                HP</label>
-                                            <input type="text" id="nomor_hp" name="nomor_hp"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Nomor HP" value="{{ $mustahik->nomor_hp }}" />
-                                        </div>
 
-
-                                        <div>
-                                            <label for="alamat"
-                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Alamat
-                                                Mustahik</label>
-                                            <textarea id="alamat" name="alamat"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Alamat Muzakki">{{ $mustahik->alamat }}</textarea>
-                                        </div>
+                                        <x-input-field name="nomor_hp" label=" Nomor HP" placeholder="Masukkan Nomor HP"
+                                            type="number" value="{{ $mustahik->nomor_hp }}" />
+                                        <x-textarea name="alamat" label="Alamat Mustahik" placeholder="Isi Alamat Mustahik"
+                                            value="{{ $mustahik->alamat }}" />
                                         <div>
                                             <label for="tanggal_pembayaran"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Tanggal
