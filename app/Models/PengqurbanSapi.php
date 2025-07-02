@@ -16,6 +16,7 @@ class PengqurbanSapi extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
+        'nomor_antrian',
         'nama_satu',
         'nama_dua',
         'nama_tiga',

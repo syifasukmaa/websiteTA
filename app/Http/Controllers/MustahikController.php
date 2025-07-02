@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mustahik;
 use App\Models\RT;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -117,4 +118,13 @@ class MustahikController extends Controller
         // Alert::success('Success Title', 'Data mustahik ' . $mustahik->nama_keluarga . ' berhasil dihapus');
         return redirect()->route('zakatMustahik.index');
     }
+
+    // public function pdfGenerator()
+    // {
+
+    //     $mustahiks = Mustahik::with('RTWarga')->get();
+    //     $pdf = Pdf::loadView('admin.zakat.mustahik.mustahikData', compact('mustahiks'));
+    //     // $pdf = \PDF::loadView('admin.zakat.mustahik.pdf', compact('mustahiks'));
+    //     return $pdf->download('data_mustahik.pdf');
+    // }
 }

@@ -44,6 +44,7 @@ Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
     Route::get('/admin/zakat/mustahik/edit/{id}', [MustahikController::class, 'edit'])->name('zakatMustahik.edit');
     Route::put('/admin/zakat/mustahik/{id}', [MustahikController::class, 'update'])->name('zakatMustahik.update');
     Route::delete('/admin/zakat/mustahik/{id}', [MustahikController::class, 'delete'])->name('zakatMustahik.delete');
+    // Route::get('pdf_generator', [MustahikController::class, 'pdfGenerator'])->name('zakatMustahik.pdf');
 
     // Qurban
     Route::get('/admin/qurban/pendaftarQurban', [PendaftarQurbanController::class, 'index'])->name('pendaftarQurban.index');

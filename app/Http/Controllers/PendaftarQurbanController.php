@@ -87,10 +87,14 @@ class PendaftarQurbanController extends Controller
             'id_RT' => 'required',
             'status_pembayaran' => 'required',
         ]);
+
         $tahun = date('Y');
         $nomorAntrian = PengqurbanSapi::where('tahun', $tahun)->count() + 1;
         $qurban = new PengqurbanSapi();
 
+
+
+        $qurban->tahun = $tahun;
         $qurban->nomor_antrian = $nomorAntrian;
         $qurban->nama_satu = $request->nama_satu;
         $qurban->nama_dua = $request->nama_dua;
