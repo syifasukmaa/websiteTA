@@ -22,7 +22,6 @@
                                 <form class="" method="get"
                                     action="{{ route('pendaftarQurban.edit', $qurban->id_pendaftar_qurban) }}">
                                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-
                                         <div>
                                             <label for="nama"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama

@@ -22,7 +22,7 @@
                                 <form method=""
                                     action="{{ route('pendaftarQurban.kerbau.edit', $qurban->id_pengqurban_sapi) }}">
                                     @csrf
-                                    <div class="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-4 md:grid-cols-2">
+                                    <div class="grid grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2">
                                         <div>
                                             <label for="nama_satu"
                                                 class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Nama

@@ -12,7 +12,7 @@ class PendaftarQurbanController extends Controller
 {
     public function index()
     {
-        $qurbans = PendaftarQurban::latest();
+        $qurbans = PendaftarQurban::oldest();
         $jumlahUang = PendaftarQurban::sum('biaya');
 
         if (request('search')) {
@@ -36,7 +36,7 @@ class PendaftarQurbanController extends Controller
     }
     public function kerbau()
     {
-        $qurbans = PengqurbanSapi::latest();
+        $qurbans = PengqurbanSapi::oldest();
         $jumlahUang = PengqurbanSapi::sum('biaya');
 
         if (request('search')) {

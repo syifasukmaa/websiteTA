@@ -94,7 +94,7 @@
                                         </div> --}}
 
                                         <x-input-field name="biaya" label="Biaya (Rp)"
-                                            placeholder="Masukkan Jumlah Biaya Santunan" :required="true" />
+                                            placeholder="Masukkan Jumlah Biaya Santunan" :required="true" type="number" />
 
                                         <div>
                                             <label for="pendidikan"
