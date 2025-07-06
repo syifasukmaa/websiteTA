@@ -52,7 +52,7 @@
                                                 (Liter)</label>
                                             <input type="text" id="jumlah_zakat" disabled
                                                 class="block w-full px-0 text-sm text-gray-900 border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
-                                                placeholder="Jumlah Zakat" value="{{ $zakat->beras }}" />
+                                                placeholder="Jumlah Zakat" value="{{ floatval($zakat->beras) }}" />
                                         </div>
                                         <div>
                                             <label for="jumlah_zakat"

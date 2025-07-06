@@ -32,7 +32,7 @@
                                         <x-input-field name="uang" label="Uang (Rp)" placeholder="Masukkan Jumlah Uang"
                                             value="{{ $zakat->uang }}" />
                                         <x-input-field name="beras" label="Beras" placeholder="Masukkan Jumlah Beras"
-                                            value="{{ $zakat->nama_istri }}" />
+                                            value="{{ floatval($zakat->beras) }}" />
 
                                         <x-input-field name="infaq" label="Infaq" placeholder="Masukkan Nama Istri"
                                             value="{{ $zakat->infaq }}" />

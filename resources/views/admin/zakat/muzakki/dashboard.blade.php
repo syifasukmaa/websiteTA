@@ -58,7 +58,8 @@
                             {{ $zakats->links() }}
 
                             <div class="grid gap-4 mt-4 md:grid-cols-3">
-                                <p><span class="font-semibold text-black">Total Beras:</span> {{ $jumlahBeras }} Liter</p>
+                                <p><span class="font-semibold text-black">Total Beras:</span> {{ floatval($jumlahBeras) }}
+                                    Liter</p>
                                 <p><span class="font-semibold text-black">Total Uang Zakat:</span> Rp.
                                     {{ number_format($JumlahUangZakat) }}</p>
                                 <p><span class="font-semibold text-black">Total Infaq:</span> Rp.
@@ -121,7 +122,7 @@
                                                 <td
                                                     class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                     <span
-                                                        class="text-sm font-semibold leading-tight text-slate-800">{{ $muzakki->beras }}
+                                                        class="text-sm font-semibold leading-tight text-slate-800">{{ floatval($muzakki->beras) }}
                                                         Liter</span>
                                                 </td>
                                                 <td
