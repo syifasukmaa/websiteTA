@@ -34,7 +34,33 @@
                     class="relative flex flex-col min-w-0 mt-5 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
                     <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                         <h6 class="mb-3 font-medium text-hijau1">Data Seluruh Pengguna</h6>
-                        {{ $users->links() }}
+                        <div class="flex items-center justify-between">
+                            <div class="flex">
+
+                                <p class="text-slate-800">Halaman <span class="font-bold ">{{ $users->currentPage() }}
+                                    </span> sampai <span class="font-bold">{{ $users->lastPage() }}</span> dari
+                                    <span class="font-bold">{{ $users->total() }} Data</span>
+                                </p>
+                            </div>
+
+                            <div class="flex justify-end mt-4">
+                                @if ($users->onFirstPage())
+                                    <span
+                                        class="px-4 py-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Previous</span>
+                                @else
+                                    <a href="{{ $users->previousPageUrl() }}"
+                                        class="px-4 py-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Previous</a>
+                                @endif
+
+                                @if ($users->hasMorePages())
+                                    <a href="{{ $users->nextPageUrl() }}"
+                                        class="px-4 py-2 ml-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Next</a>
+                                @else
+                                    <span
+                                        class="px-4 py-2 ml-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Next</span>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                     <div class="flex-auto px-0 pt-0 pb-2">
                         <div class="p-0 overflow-x-auto">

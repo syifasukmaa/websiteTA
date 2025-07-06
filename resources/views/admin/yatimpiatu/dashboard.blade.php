@@ -39,7 +39,33 @@
                     class="relative flex flex-col min-w-0 mt-5 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
                     <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                         <h6 class="mb-2 font-medium text-hijau2">Data Yatim Piatu</h6>
-                        {{ $yatims->links() }}
+                        <div class="flex items-center justify-between">
+                            <div class="flex">
+
+                                <p class="text-slate-800">Halaman <span class="font-bold ">{{ $yatims->currentPage() }}
+                                    </span> sampai <span class="font-bold">{{ $yatims->lastPage() }}</span> dari
+                                    <span class="font-bold">{{ $yatims->total() }} Data</span>
+                                </p>
+                            </div>
+
+                            <div class="flex justify-end mt-4">
+                                @if ($yatims->onFirstPage())
+                                    <span
+                                        class="px-4 py-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Previous</span>
+                                @else
+                                    <a href="{{ $yatims->previousPageUrl() }}"
+                                        class="px-4 py-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Previous</a>
+                                @endif
+
+                                @if ($yatims->hasMorePages())
+                                    <a href="{{ $yatims->nextPageUrl() }}"
+                                        class="px-4 py-2 ml-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Next</a>
+                                @else
+                                    <span
+                                        class="px-4 py-2 ml-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Next</span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="grid gap-4 mt-4">
                             <p><span class="font-semibold text-black">Total Uang Santunan Yatim Piatu:</span> Rp.
@@ -85,7 +111,7 @@
                                             <td
                                                 class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
-                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $loop->iteration }}</span>
+                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ ($yatims->currentPage() - 1) * $yatims->perPage() + $loop->iteration }}</span>
                                             </td>
 
                                             <td

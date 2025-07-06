@@ -54,9 +54,36 @@
                     class="relative flex flex-col min-w-0 mt-5 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
                     <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                         <h6 class="mb-2 font-medium text-hijau2">Data Pendaftar Qurban</h6>
-                        {{ $qurbans->links() }}
+                        <div class="flex items-center justify-between">
+                            <div class="flex">
 
-                        <div class="grid gap-4 mt-4 md:grid-cols-3">
+                                <p class="text-slate-800">Menampilkan halaman <span
+                                        class="font-bold ">{{ $qurbans->currentPage() }}
+                                    </span> sampai <span class="font-bold">{{ $qurbans->lastPage() }}</span> dari
+                                    <span class="font-bold">{{ $qurbans->total() }} Data</span>
+                                </p>
+                            </div>
+
+                            <div class="flex justify-end mt-4">
+                                @if ($qurbans->onFirstPage())
+                                    <span
+                                        class="px-4 py-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Previous</span>
+                                @else
+                                    <a href="{{ $qurbans->previousPageUrl() }}"
+                                        class="px-4 py-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Previous</a>
+                                @endif
+
+                                @if ($qurbans->hasMorePages())
+                                    <a href="{{ $qurbans->nextPageUrl() }}"
+                                        class="px-4 py-2 ml-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Next</a>
+                                @else
+                                    <span
+                                        class="px-4 py-2 ml-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Next</span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="grid gap-4 mt-4 md:grid-cols-2">
                             <p><span class="font-semibold text-black">Total Uang Qurban Kambing:</span> Rp.
                                 {{ number_format($jumlahUang) }}</p>
                         </div>

@@ -32,7 +32,7 @@ class MuzakkiController extends Controller
         }
 
         return view('admin.zakat.muzakki.dashboard', [
-            'zakats' => $muzakki->paginate(10),
+            'zakats' => $muzakki->paginate(15),
             'jumlahBeras' => $jumlahBeras,
             'JumlahUangZakat' => $JumlahUangZakat,
             'JumlahInfaq' => $JumlahInfaq,

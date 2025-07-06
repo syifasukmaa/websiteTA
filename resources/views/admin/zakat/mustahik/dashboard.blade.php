@@ -66,7 +66,33 @@
                                 <span class="">Download PDF</span>
                             </a>
                         </div> --}}
-                        {{ $mustahiks->links() }}
+                        <div class="flex items-center justify-between">
+                            <div class="flex">
+
+                                <p class="text-slate-800">Halaman <span class="font-bold ">{{ $mustahiks->currentPage() }}
+                                    </span> sampai <span class="font-bold">{{ $mustahiks->lastPage() }}</span> dari
+                                    <span class="font-bold">{{ $mustahiks->total() }} Data</span>
+                                </p>
+                            </div>
+
+                            <div class="flex justify-end mt-4">
+                                @if ($mustahiks->onFirstPage())
+                                    <span
+                                        class="px-4 py-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Previous</span>
+                                @else
+                                    <a href="{{ $mustahiks->previousPageUrl() }}"
+                                        class="px-4 py-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Previous</a>
+                                @endif
+
+                                @if ($mustahiks->hasMorePages())
+                                    <a href="{{ $mustahiks->nextPageUrl() }}"
+                                        class="px-4 py-2 ml-2 font-medium text-green-600 bg-blue-500 border rounded-lg">Next</a>
+                                @else
+                                    <span
+                                        class="px-4 py-2 ml-2 font-medium text-green-300 border rounded-lg cursor-not-allowed">Next</span>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                     <div class="flex-auto px-0 pt-0 pb-2">
                         <div class="p-0 overflow-x-auto">
@@ -106,7 +132,7 @@
                                             <td
                                                 class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
-                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $loop->iteration }}</span>
+                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ ($mustahiks->currentPage() - 1) * $mustahiks->perPage() + $loop->iteration }}</span>
                                             </td>
                                             <td
                                                 class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
