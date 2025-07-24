@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if ($request->user()->role == 'admin') {
-            return redirect()->route('admin.muzakki.index');
+            return redirect()->route('admin.dashboard');
         }
 
         if ($request->user()->role == 'ketua_rt') {
@@ -38,7 +38,7 @@ class AuthenticatedSessionController extends Controller
         }
 
 
-        return redirect()->intended(route('admin.muzakki.index'));
+        return redirect()->intended(route('admin.dashboard'));
     }
 
     /**

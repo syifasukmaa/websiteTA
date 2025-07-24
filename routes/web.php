@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DuafaController;
 use App\Http\Controllers\MustahikController;
 use App\Http\Controllers\MuzakkiController;
@@ -27,6 +28,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
+    //dahsboardutama
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     // muzakki
     Route::get('/admin/zakat/muzakki', [MuzakkiController::class, 'index'])->name('admin.muzakki.index');
     Route::get('/admin/zakat/muzakki/create', [MuzakkiController::class, 'create'])->name('admin.muzakki.create');
@@ -44,7 +47,7 @@ Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
     Route::get('/admin/zakat/mustahik/edit/{id}', [MustahikController::class, 'edit'])->name('zakatMustahik.edit');
     Route::put('/admin/zakat/mustahik/{id}', [MustahikController::class, 'update'])->name('zakatMustahik.update');
     Route::delete('/admin/zakat/mustahik/{id}', [MustahikController::class, 'delete'])->name('zakatMustahik.delete');
-    // Route::get('pdf_generator', [MustahikController::class, 'pdfGenerator'])->name('zakatMustahik.pdf');
+    Route::get('pdf_generator', [MustahikController::class, 'pdfGenerator'])->name('zakatMustahik.pdf');
 
     // Qurban
     Route::get('/admin/qurban/pendaftarQurban', [PendaftarQurbanController::class, 'index'])->name('pendaftarQurban.index');

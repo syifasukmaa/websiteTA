@@ -119,12 +119,12 @@ class MustahikController extends Controller
         return redirect()->route('zakatMustahik.index');
     }
 
-    // public function pdfGenerator()
-    // {
+    public function pdfGenerator()
+    {
 
-    //     $mustahiks = Mustahik::with('RTWarga')->get();
-    //     $pdf = Pdf::loadView('admin.zakat.mustahik.mustahikData', compact('mustahiks'));
-    //     // $pdf = \PDF::loadView('admin.zakat.mustahik.pdf', compact('mustahiks'));
-    //     return $pdf->download('data_mustahik.pdf');
-    // }
+        $mustahiks = Mustahik::with('RTWarga')->get();
+        $pdf = Pdf::loadView('admin.zakat.mustahik.mustahikData', compact('mustahiks'));
+        // $pdf = \PDF::loadView('admin.zakat.mustahik.pdf', compact('mustahiks'));
+        return $pdf->download('data_mustahik.pdf');
+    }
 }

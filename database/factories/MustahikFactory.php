@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\RT;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -24,6 +25,7 @@ class MustahikFactory extends Factory
             'nama_istri' => fake()->name(),
             'alamat' => fake()->address(),
             'nomor_hp' => fake()->phoneNumber(),
+            'id_RT' => RT::all()->random()->id,
             'pembuatData_id' => User::all()->random()->id
         ];
     }

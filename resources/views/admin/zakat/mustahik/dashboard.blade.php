@@ -53,10 +53,9 @@
                     class="relative flex flex-col min-w-0 mt-5 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
                     <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                         <h6 class="mb-2 font-medium text-hijau2">Data Mustahik</h6>
-                        {{-- <div class="flex items-center justify-between my-4">
-
+                        <div class="flex items-center justify-end my-4">
                             <a href="{{ route('zakatMustahik.pdf') }}"
-                                class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex"><svg
+                                class="text-green-600 bg-transparent hover:bg-green-600 hover:text-white border border-green-500 focus:ring-4 focus:ring-blue-300 font-base rounded-lg text-sm px-3 py-2.5 me-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex"><svg
                                     class="mr-2" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"
                                     viewBox="0 0 24 24">
@@ -65,7 +64,7 @@
                                 </svg>
                                 <span class="">Download PDF</span>
                             </a>
-                        </div> --}}
+                        </div>
                         <div class="flex items-center justify-between">
                             <div class="flex">
 

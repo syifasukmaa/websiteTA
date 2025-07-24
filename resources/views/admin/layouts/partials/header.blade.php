@@ -1,5 +1,5 @@
 <aside
-    class="max-w-62.5 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-md transition-transform duration-200 xl:left-0 xl:translate-x-0 xl:bg-transparent">
+    class="max-w-62.5 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-md transition-transform duration-200 xl:left-0 xl:translate-x-0 xl:bg-transparent h-screen overflow-auto">
     <div class="h-19.5">
         <i class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-slate-400 xl:hidden"
             sidenav-close></i>
@@ -13,31 +13,37 @@
 
     <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
 
-    <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
-        <ul class="flex flex-col pl-0 mb-0">
+    <div class="items-center block w-auto max-h-screen overflow-auto grow basis-full">
+        {{-- <div class="flex flex-col justify-between"> --}}
+        <ul class="flex flex-col flex-grow h-full pl-0 mb-0">
+            @cannot('ketua_rt')
+                <li class="mt-0.5 w-full">
+                    <a class="{{ Request::is('admin/dashboard') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 rounded-lg text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
+                        href="{{ route('admin.dashboard') }}">
+                        <div
+                            class="{{ Request::is('admin/dashboard') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5 z-10">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5Zm16 14a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2ZM4 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6Zm16-2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6Z" />
+                            </svg>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
+                    </a>
+                </li>
+            @endcannot
             <li class="mt-0.5 w-full">
                 <a class="{{ Request::is('admin/zakat/*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none bg-transparent' }} py-2.7  text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg px-4 text-slate-700 transition-colors"
                     href="{{ route('zakatMustahik.index') }}">
                     <div
                         class="{{ Request::is('admin/zakat/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5 z-auto">
-                        <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>shop</title>
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-1716.000000, -439.000000)" fill="#000000" fill-rule="nonzero">
-                                    <g transform="translate(1716.000000, 291.000000)">
-                                        <g transform="translate(0.000000, 148.000000)">
-                                            <path class="opacity-60"
-                                                d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z">
-                                            </path>
-                                            <path class=""
-                                                d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L550.2 352l41.8 0c26.5 0 48-21.5 48-48l0-128c0-26.5-21.5-48-48-48l-76 0-4 0-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48-80 0c-26.5 0-48 21.5-48 48L0 304c0 26.5 21.5 48 48 48l108.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123z" />
                         </svg>
+
                     </div>
                     <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Zakat</span>
                 </a>
@@ -48,14 +54,15 @@
                         href="{{ route('pendaftarQurban.index') }}">
                         <div
                             class="{{ Request::is('admin/qurban/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5 z-10">
-                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
-                                    d="m20.9532 11.7634-2.0523-2.05225-2.0523 2.05225 2.0523 2.0523 2.0523-2.0523Zm-1.3681-2.73651-4.1046-4.10457L12.06 8.3428l4.1046 4.1046 3.4205-3.42051Zm-4.1047 2.73651-2.7363-2.73638-8.20919 8.20918 2.73639 2.7364 8.2091-8.2092Z" />
-                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
-                                    d="m12.9306 3.74083 1.8658 1.86571-2.0523 2.05229-1.5548-1.55476c-.995-.99505-3.23389-.49753-3.91799.18657l2.73639-2.73639c.6841-.68409 1.9901-.74628 2.9229.18658Z" />
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 5c0 1 1 3 3 3s3-2 3-3V3M19 5c0 1-1 3-3 3s-3-2-3-3V3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8 12v2m8-2v2M12 8v4" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="12" cy="16" r="6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
+
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Qurban</span>
                     </a>
@@ -67,12 +74,14 @@
                     href="{{ route('yatimPiatu.index') }}">
                     <div
                         class="{{ Request::is('admin/yatimPiatu*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
-                                d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5Zm16 14a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2ZM4 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6Zm16-2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6Z" />
+
+
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21s-6-4.5-6-9a6 6 0 0 1 12 0c0 4.5-6 9-6 9z" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
+
 
                     </div>
                     <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Yatim Piatu</span>
@@ -154,8 +163,9 @@
                     </span>
                 </a>
             </li> --}}
-            <li class="mt-0.5 w-full">
-                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+
+            <li class="mt-auto">
+                <a class="py-2.7 text-sm rounded-lg ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
                     href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <div
                         class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-transparent bg-center stroke-0 text-center xl:p-2.5">
@@ -172,8 +182,8 @@
                     @csrf
                 </form>
             </li>
-
         </ul>
+
     </div>
 
 
