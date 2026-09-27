@@ -19,1463 +19,566 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
         <style>
-            /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
-            *,
-            ::after,
-            ::before {
-                box-sizing: border-box;
-                border-width: 0;
-                border-style: solid;
-                border-color: #e5e7eb
-            }
+            *,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}
+            :host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree,ui-sans-serif,system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+            body{margin:0;line-height:inherit}
+            a{color:inherit;text-decoration:inherit}
+            h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+            button{cursor:pointer;background-color:transparent;background-image:none;font:inherit;color:inherit}
+            img,video{max-width:100%;height:auto;display:block}
 
-            ::after,
-            ::before {
-                --tw-content: ''
-            }
-
-            .swiper-slide img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 8px;
-            }
-
-            :host,
-            html {
-                line-height: 1.5;
-                -webkit-text-size-adjust: 100%;
-                -moz-tab-size: 4;
-                tab-size: 4;
-                font-family: Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-                font-feature-settings: normal;
-                font-variation-settings: normal;
-                -webkit-tap-highlight-color: transparent
-            }
-
-            body {
-                margin: 0;
-                line-height: inherit
-            }
-
-            hr {
-                height: 0;
-                color: inherit;
-                border-top-width: 1px
-            }
-
-            abbr:where([title]) {
-                -webkit-text-decoration: underline dotted;
-                text-decoration: underline dotted
-            }
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                font-size: inherit;
-                font-weight: inherit
-            }
-
-            a {
-                color: inherit;
-                text-decoration: inherit
-            }
-
-            b,
-            strong {
-                font-weight: bolder
-            }
-
-            code,
-            kbd,
-            pre,
-            samp {
-                font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-                font-feature-settings: normal;
-                font-variation-settings: normal;
-                font-size: 1em
-            }
-
-            small {
-                font-size: 80%
-            }
-
-            sub,
-            sup {
-                font-size: 75%;
-                line-height: 0;
-                position: relative;
-                vertical-align: baseline
-            }
-
-            sub {
-                bottom: -.25em
-            }
-
-            sup {
-                top: -.5em
-            }
-
-            table {
-                text-indent: 0;
-                border-color: inherit;
-                border-collapse: collapse
-            }
-
-            button,
-            input,
-            optgroup,
-            select,
-            textarea {
-                font-family: inherit;
-                font-feature-settings: inherit;
-                font-variation-settings: inherit;
-                font-size: 100%;
-                font-weight: inherit;
-                line-height: inherit;
-                color: inherit;
-                margin: 0;
-                padding: 0
-            }
-
-            button,
-            select {
-                text-transform: none
-            }
-
-            [type=button],
-            [type=reset],
-            [type=submit],
-            button {
-                -webkit-appearance: button;
-                background-color: transparent;
-                background-image: none
-            }
-
-            :-moz-focusring {
-                outline: auto
-            }
-
-            :-moz-ui-invalid {
-                box-shadow: none
-            }
-
-            progress {
-                vertical-align: baseline
-            }
-
-            ::-webkit-inner-spin-button,
-            ::-webkit-outer-spin-button {
-                height: auto
-            }
-
-            [type=search] {
-                -webkit-appearance: textfield;
-                outline-offset: -2px
-            }
-
-            ::-webkit-search-decoration {
-                -webkit-appearance: none
-            }
-
-            ::-webkit-file-upload-button {
-                -webkit-appearance: button;
-                font: inherit
-            }
-
-            summary {
-                display: list-item
-            }
-
-            blockquote,
-            dd,
-            dl,
-            figure,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
-            hr,
-            p,
-            pre {
-                margin: 0
-            }
-
-            fieldset {
-                margin: 0;
-                padding: 0
-            }
-
-            legend {
-                padding: 0
-            }
-
-            menu,
-            ol,
-            ul {
-                list-style: none;
-                margin: 0;
-                padding: 0
-            }
-
-            dialog {
-                padding: 0
-            }
-
-            textarea {
-                resize: vertical
-            }
-
-            input::placeholder,
-            textarea::placeholder {
-                opacity: 1;
-                color: #9ca3af
-            }
-
-            [role=button],
-            button {
-                cursor: pointer
-            }
-
-            :disabled {
-                cursor: default
-            }
-
-            audio,
-            canvas,
-            embed,
-            iframe,
-            img,
-            object,
-            svg,
-            video {
-                display: block;
-                vertical-align: middle
-            }
-
-            img,
-            video {
-                max-width: 100%;
-                height: auto
-            }
-
-            [hidden] {
-                display: none
-            }
-
-            *,
-            ::before,
-            ::after {
-                --tw-border-spacing-x: 0;
-                --tw-border-spacing-y: 0;
-                --tw-translate-x: 0;
-                --tw-translate-y: 0;
-                --tw-rotate: 0;
-                --tw-skew-x: 0;
-                --tw-skew-y: 0;
-                --tw-scale-x: 1;
-                --tw-scale-y: 1;
-                --tw-pan-x: ;
-                --tw-pan-y: ;
-                --tw-pinch-zoom: ;
-                --tw-scroll-snap-strictness: proximity;
-                --tw-gradient-from-position: ;
-                --tw-gradient-via-position: ;
-                --tw-gradient-to-position: ;
-                --tw-ordinal: ;
-                --tw-slashed-zero: ;
-                --tw-numeric-figure: ;
-                --tw-numeric-spacing: ;
-                --tw-numeric-fraction: ;
-                --tw-ring-inset: ;
-                --tw-ring-offset-width: 0px;
-                --tw-ring-offset-color: #fff;
-                --tw-ring-color: rgb(59 130 246 / 0.5);
-                --tw-ring-offset-shadow: 0 0 #0000;
-                --tw-ring-shadow: 0 0 #0000;
-                --tw-shadow: 0 0 #0000;
-                --tw-shadow-colored: 0 0 #0000;
-                --tw-blur: ;
-                --tw-brightness: ;
-                --tw-contrast: ;
-                --tw-grayscale: ;
-                --tw-hue-rotate: ;
-                --tw-invert: ;
-                --tw-saturate: ;
-                --tw-sepia: ;
-                --tw-drop-shadow: ;
-                --tw-backdrop-blur: ;
-                --tw-backdrop-brightness: ;
-                --tw-backdrop-contrast: ;
-                --tw-backdrop-grayscale: ;
-                --tw-backdrop-hue-rotate: ;
-                --tw-backdrop-invert: ;
-                --tw-backdrop-opacity: ;
-                --tw-backdrop-saturate: ;
-                --tw-backdrop-sepia:
-            }
-
-            ::backdrop {
-                --tw-border-spacing-x: 0;
-                --tw-border-spacing-y: 0;
-                --tw-translate-x: 0;
-                --tw-translate-y: 0;
-                --tw-rotate: 0;
-                --tw-skew-x: 0;
-                --tw-skew-y: 0;
-                --tw-scale-x: 1;
-                --tw-scale-y: 1;
-                --tw-pan-x: ;
-                --tw-pan-y: ;
-                --tw-pinch-zoom: ;
-                --tw-scroll-snap-strictness: proximity;
-                --tw-gradient-from-position: ;
-                --tw-gradient-via-position: ;
-                --tw-gradient-to-position: ;
-                --tw-ordinal: ;
-                --tw-slashed-zero: ;
-                --tw-numeric-figure: ;
-                --tw-numeric-spacing: ;
-                --tw-numeric-fraction: ;
-                --tw-ring-inset: ;
-                --tw-ring-offset-width: 0px;
-                --tw-ring-offset-color: #fff;
-                --tw-ring-color: rgb(59 130 246 / 0.5);
-                --tw-ring-offset-shadow: 0 0 #0000;
-                --tw-ring-shadow: 0 0 #0000;
-                --tw-shadow: 0 0 #0000;
-                --tw-shadow-colored: 0 0 #0000;
-                --tw-blur: ;
-                --tw-brightness: ;
-                --tw-contrast: ;
-                --tw-grayscale: ;
-                --tw-hue-rotate: ;
-                --tw-invert: ;
-                --tw-saturate: ;
-                --tw-sepia: ;
-                --tw-drop-shadow: ;
-                --tw-backdrop-blur: ;
-                --tw-backdrop-brightness: ;
-                --tw-backdrop-contrast: ;
-                --tw-backdrop-grayscale: ;
-                --tw-backdrop-hue-rotate: ;
-                --tw-backdrop-invert: ;
-                --tw-backdrop-opacity: ;
-                --tw-backdrop-saturate: ;
-                --tw-backdrop-sepia:
-            }
-
-            .absolute {
-                position: absolute
-            }
-
-            .relative {
-                position: relative
-            }
-
-            .-left-20 {
-                left: -5rem
-            }
-
-            .top-0 {
-                top: 0px
-            }
-
-            .-bottom-16 {
-                bottom: -4rem
-            }
-
-            .-left-16 {
-                left: -4rem
-            }
-
-            .-mx-3 {
-                margin-left: -0.75rem;
-                margin-right: -0.75rem
-            }
-
-            .mt-4 {
-                margin-top: 1rem
-            }
-
-            .mt-6 {
-                margin-top: 1.5rem
-            }
-
-            .flex {
-                display: flex
-            }
-
-            .grid {
-                display: grid
-            }
-
-            .hidden {
-                display: none
-            }
-
-            .aspect-video {
-                aspect-ratio: 16 / 9
-            }
-
-            .size-12 {
-                width: 3rem;
-                height: 3rem
-            }
-
-            .size-5 {
-                width: 1.25rem;
-                height: 1.25rem
-            }
-
-            .size-6 {
-                width: 1.5rem;
-                height: 1.5rem
-            }
-
-            .h-12 {
-                height: 3rem
-            }
-
-            .h-40 {
-                height: 10rem
-            }
-
-            .h-full {
-                height: 100%
-            }
-
-            .min-h-screen {
-                min-height: 100vh
-            }
-
-            .w-full {
-                width: 100%
-            }
-
-            .w-\[calc\(100\%\+8rem\)\] {
-                width: calc(100% + 8rem)
-            }
-
-            .w-auto {
-                width: auto
-            }
-
-            .max-w-\[877px\] {
-                max-width: 877px
-            }
-
-            .max-w-2xl {
-                max-width: 42rem
-            }
-
-            .flex-1 {
-                flex: 1 1 0%
-            }
-
-            .shrink-0 {
-                flex-shrink: 0
-            }
-
-            .grid-cols-2 {
-                grid-template-columns: repeat(2, minmax(0, 1fr))
-            }
-
-            .flex-col {
-                flex-direction: column
-            }
-
-            .items-start {
-                align-items: flex-start
-            }
-
-            .items-center {
-                align-items: center
-            }
-
-            .items-stretch {
-                align-items: stretch
-            }
-
-            .justify-end {
-                justify-content: flex-end
-            }
-
-            .justify-center {
-                justify-content: center
-            }
-
-            .gap-2 {
-                gap: 0.5rem
-            }
-
-            .gap-4 {
-                gap: 1rem
-            }
-
-            .gap-6 {
-                gap: 1.5rem
-            }
-
-            .self-center {
-                align-self: center
-            }
-
-            .overflow-hidden {
-                overflow: hidden
-            }
-
-            .rounded-\[10px\] {
-                border-radius: 10px
-            }
-
-            .rounded-full {
-                border-radius: 9999px
-            }
-
-            .rounded-lg {
-                border-radius: 0.5rem
-            }
-
-            .rounded-md {
-                border-radius: 0.375rem
-            }
-
-            .rounded-sm {
-                border-radius: 0.125rem
-            }
-
-            .bg-\[\#FF2D20\]\/10 {
-                background-color: rgb(255 45 32 / 0.1)
-            }
-
-            .bg-white {
-                --tw-bg-opacity: 1;
-                background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-            }
-
-            .bg-gradient-to-b {
-                background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
-            }
-
-            .from-transparent {
-                --tw-gradient-from: transparent var(--tw-gradient-from-position);
-                --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-                --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
-            }
-
-            .via-white {
-                --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-                --tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)
-            }
-
-            .to-white {
-                --tw-gradient-to: #fff var(--tw-gradient-to-position)
-            }
-
-            .stroke-\[\#FF2D20\] {
-                stroke: #FF2D20
-            }
-
-            .object-cover {
-                object-fit: cover
-            }
-
-            .object-top {
-                object-position: top
-            }
-
-            .p-6 {
-                padding: 1.5rem
-            }
-
-            .px-6 {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem
-            }
-
-            .py-10 {
-                padding-top: 2.5rem;
-                padding-bottom: 2.5rem
-            }
-
-            .px-3 {
-                padding-left: 0.75rem;
-                padding-right: 0.75rem
-            }
-
-            .py-16 {
-                padding-top: 4rem;
-                padding-bottom: 4rem
-            }
-
-            .py-2 {
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem
-            }
-
-            .pt-3 {
-                padding-top: 0.75rem
-            }
-
-            .text-center {
-                text-align: center
-            }
-
-            .font-sans {
-                font-family: Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
-            }
-
-            .text-sm {
-                font-size: 0.875rem;
-                line-height: 1.25rem
-            }
-
-            .text-sm\/relaxed {
-                font-size: 0.875rem;
-                line-height: 1.625
-            }
-
-            .text-xl {
-                font-size: 1.25rem;
-                line-height: 1.75rem
-            }
-
-            .font-semibold {
-                font-weight: 600
-            }
-
-            .text-black {
-                --tw-text-opacity: 1;
-                color: rgb(0 0 0 / var(--tw-text-opacity))
-            }
-
-            .text-white {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity))
-            }
-
-            .underline {
-                -webkit-text-decoration-line: underline;
-                text-decoration-line: underline
-            }
-
-            .antialiased {
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale
-            }
-
-            .shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\] {
-                --tw-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.08);
-                --tw-shadow-colored: 0px 14px 34px 0px var(--tw-shadow-color);
-                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-            }
-
-            .ring-1 {
-                --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-                --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-                box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
-            }
-
-            .ring-transparent {
-                --tw-ring-color: transparent
-            }
-
-            .ring-white\/\[0\.05\] {
-                --tw-ring-color: rgb(255 255 255 / 0.05)
-            }
-
-            .drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\] {
-                --tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.06));
-                filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
-            }
-
-            .drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\] {
-                --tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.25));
-                filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
-            }
-
-            .transition {
-                transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-duration: 150ms
-            }
-
-            .duration-300 {
-                transition-duration: 300ms
-            }
-
-            .selection\:bg-\[\#FF2D20\] *::selection {
-                --tw-bg-opacity: 1;
-                background-color: rgb(255 45 32 / var(--tw-bg-opacity))
-            }
-
-            .selection\:text-white *::selection {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity))
-            }
-
-            .selection\:bg-\[\#FF2D20\]::selection {
-                --tw-bg-opacity: 1;
-                background-color: rgb(255 45 32 / var(--tw-bg-opacity))
-            }
-
-            .selection\:text-white::selection {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity))
-            }
-
-            .hover\:text-black:hover {
-                --tw-text-opacity: 1;
-                color: rgb(0 0 0 / var(--tw-text-opacity))
-            }
-
-            .hover\:text-black\/70:hover {
-                color: rgb(0 0 0 / 0.7)
-            }
-
-            .hover\:ring-black\/20:hover {
-                --tw-ring-color: rgb(0 0 0 / 0.2)
-            }
-
-            .focus\:outline-none:focus {
-                outline: 2px solid transparent;
-                outline-offset: 2px
-            }
-
-            .focus-visible\:ring-1:focus-visible {
-                --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-                --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-                box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
-            }
-
-            .focus-visible\:ring-\[\#FF2D20\]:focus-visible {
-                --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity))
-            }
-
-            @media (min-width: 640px) {
-                .sm\:size-16 {
-                    width: 4rem;
-                    height: 4rem
-                }
-
-                .sm\:size-6 {
-                    width: 1.5rem;
-                    height: 1.5rem
-                }
-
-                .sm\:pt-5 {
-                    padding-top: 1.25rem
-                }
-            }
-
-            @media (min-width: 768px) {
-                .md\:row-span-3 {
-                    grid-row: span 3 / span 3
-                }
-            }
-
-            @media (min-width: 1024px) {
-                .lg\:col-start-2 {
-                    grid-column-start: 2
-                }
-
-                .lg\:h-16 {
-                    height: 4rem
-                }
-
-                .lg\:max-w-7xl {
-                    max-width: 80rem
-                }
-
-                .lg\:grid-cols-3 {
-                    grid-template-columns: repeat(3, minmax(0, 1fr))
-                }
-
-                .lg\:grid-cols-2 {
-                    grid-template-columns: repeat(2, minmax(0, 1fr))
-                }
-
-                .lg\:flex-col {
-                    flex-direction: column
-                }
-
-                .lg\:items-end {
-                    align-items: flex-end
-                }
-
-                .lg\:justify-center {
-                    justify-content: center
-                }
-
-                .lg\:gap-8 {
-                    gap: 2rem
-                }
-
-                .lg\:p-10 {
-                    padding: 2.5rem
-                }
-
-                .lg\:pb-10 {
-                    padding-bottom: 2.5rem
-                }
-
-                .lg\:pt-0 {
-                    padding-top: 0px
-                }
-
-                .lg\:text-\[\#FF2D20\] {
-                    --tw-text-opacity: 1;
-                    color: rgb(255 45 32 / var(--tw-text-opacity))
-                }
-            }
-
-            @media (prefers-color-scheme: dark) {
-                .dark\:block {
-                    display: block
-                }
-
-                .dark\:hidden {
-                    display: none
-                }
-
-                .dark\:bg-black {
-                    --tw-bg-opacity: 1;
-                    background-color: rgb(0 0 0 / var(--tw-bg-opacity))
-                }
-
-                .dark\:bg-zinc-900 {
-                    --tw-bg-opacity: 1;
-                    background-color: rgb(24 24 27 / var(--tw-bg-opacity))
-                }
-
-                .dark\:via-zinc-900 {
-                    --tw-gradient-to: rgb(24 24 27 / 0) var(--tw-gradient-to-position);
-                    --tw-gradient-stops: var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)
-                }
-
-                .dark\:to-zinc-900 {
-                    --tw-gradient-to: #18181b var(--tw-gradient-to-position)
-                }
-
-                .dark\:text-white\/50 {
-                    color: rgb(255 255 255 / 0.5)
-                }
-
-                .dark\:text-white {
-                    --tw-text-opacity: 1;
-                    color: rgb(255 255 255 / var(--tw-text-opacity))
-                }
-
-                .dark\:text-white\/70 {
-                    color: rgb(255 255 255 / 0.7)
-                }
-
-                .dark\:ring-zinc-800 {
-                    --tw-ring-opacity: 1;
-                    --tw-ring-color: rgb(39 39 42 / var(--tw-ring-opacity))
-                }
-
-                .dark\:hover\:text-white:hover {
-                    --tw-text-opacity: 1;
-                    color: rgb(255 255 255 / var(--tw-text-opacity))
-                }
-
-                .dark\:hover\:text-white\/70:hover {
-                    color: rgb(255 255 255 / 0.7)
-                }
-
-                .dark\:hover\:text-white\/80:hover {
-                    color: rgb(255 255 255 / 0.8)
-                }
-
-                .dark\:hover\:ring-zinc-700:hover {
-                    --tw-ring-opacity: 1;
-                    --tw-ring-color: rgb(63 63 70 / var(--tw-ring-opacity))
-                }
-
-                .dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible {
-                    --tw-ring-opacity: 1;
-                    --tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity))
-                }
-
-                .dark\:focus-visible\:ring-white:focus-visible {
-                    --tw-ring-opacity: 1;
-                    --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity))
-                }
-            }
         </style>
     @endif
+
+    <style>
+
+        .arch {
+            border-radius: 45% 45% 0 0 / 70% 70% 0 0;
+        }
+
+        .arch-sm {
+            border-radius: 50% 50% 0 0 / 90% 90% 0 0;
+        }
+
+        .prayer-active {
+            box-shadow: inset 0 0 0 2px currentColor;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .animate-marquee {
+            animation: marquee 28s linear infinite;
+        }
+
+        .navbar-shadow {
+            box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Make Swiper's pagination follow the mosque's green palette instead of
+           its default blue theme. `.swiper.text-hijau3` sets the CSS color on the
+           container (a real, compiled Tailwind color), and currentColor picks it up. */
+        .swiper {
+            --swiper-theme-color: currentColor;
+        }
+
+        .swiper-pagination-bullet {
+            opacity: 0.45;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <div
-            class="relative flex flex-col items-center justify-center min-h-screen overflow-hidden selection:bg-green-400 selection:text-white">
-            <div class="relative w-full max-w-2xl md:max-w-full">
-                <div class="py-2 overflow-hidden bg-green-100 border border-green-600 marquee-masjid-interaktif">
-                    <p class="inline-block font-medium text-green-800 whitespace-nowrap animate-marquee">
-                        🕌 <a href="#jadwal-sholat" class="text-green-700 hover:text-green-900">Selamat datang di Masjid
-                            Jami At Taubah</a> |
-                        📖 <a href="#pengajian" class="text-green-700 hover:text-green-900">Pengajian Mingguan</a> |
-                        🌙 <a href="#ramadhan" class="text-green-700 hover:text-green-900">Kegiatan Bulan Ramadhan</a> |
-                        🕋 <a href="#donasi" class="text-green-700 hover:text-green-900">Donasi Masjid</a>
-                    </p>
+<body class="font-sans antialiased text-black/70 dark:bg-black dark:text-white/70" style="font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;">
+    <div class="bg-[#FBFAF6] dark:bg-black">
+
+        {{-- Top announcement strip --}}
+        <div class="relative z-40 overflow-hidden py-2 bg-hijau1 text-white">
+            <p class="inline-block w-full whitespace-nowrap animate-marquee text-sm font-medium">
+                🕌&nbsp; <a href="#jadwalSholat" class="hover:underline">Selamat datang di Masjid Jami At Taubah</a>
+                &nbsp;&nbsp;•&nbsp;&nbsp;
+                📖&nbsp; <a href="#layanan" class="hover:underline">Pengajian Mingguan</a>
+                &nbsp;&nbsp;•&nbsp;&nbsp;
+                🌙&nbsp; <a href="#layanan" class="hover:underline">Kegiatan Bulan Ramadhan</a>
+                &nbsp;&nbsp;•&nbsp;&nbsp;
+                🕋&nbsp; <a href="#layanan" class="hover:underline">Donasi Masjid</a>
+            </p>
+        </div>
+
+        {{-- Navbar --}}
+        <header id="site-navbar" class="sticky top-0 z-30 bg-white/90 backdrop-blur-md transition-shadow duration-300 dark:bg-black/90">
+            <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+                <a href="#beranda" class="flex items-center gap-3">
+                    <img src="{{ asset('assets/img/logoMasjid.png') }}" alt="Logo Masjid At Taubah" class="h-11 w-11 object-contain">
+                    <span class="hidden flex-col leading-tight sm:flex">
+                        <span class="font-semibold text-hijau1 dark:text-white" style="font-family: Poppins, sans-serif;">Masjid Jami</span>
+                        <span class="text-xs tracking-wide text-hijau2 dark:text-white/60">At Taubah — Juanda, Depok</span>
+                    </span>
+                </a>
+
+                <ul class="hidden items-center gap-1 lg:flex">
+                    <li><a href="#beranda" class="rounded-md px-4 py-2 text-sm font-medium text-black/70 transition hover:bg-hijau4 hover:text-hijau1 dark:text-white/70">Beranda</a></li>
+                    <li><a href="#jadwalSholat" class="rounded-md px-4 py-2 text-sm font-medium text-black/70 transition hover:bg-hijau4 hover:text-hijau1 dark:text-white/70">Jadwal Sholat</a></li>
+                    <li><a href="#layanan" class="rounded-md px-4 py-2 text-sm font-medium text-black/70 transition hover:bg-hijau4 hover:text-hijau1 dark:text-white/70">Layanan</a></li>
+                    <li><a href="#fasilitas" class="rounded-md px-4 py-2 text-sm font-medium text-black/70 transition hover:bg-hijau4 hover:text-hijau1 dark:text-white/70">Fasilitas</a></li>
+                    <li><a href="#galeri" class="rounded-md px-4 py-2 text-sm font-medium text-black/70 transition hover:bg-hijau4 hover:text-hijau1 dark:text-white/70">Galeri</a></li>
+                    <li><a href="#lokasi" class="rounded-md px-4 py-2 text-sm font-medium text-black/70 transition hover:bg-hijau4 hover:text-hijau1 dark:text-white/70">Lokasi</a></li>
+                </ul>
+
+                <a href="https://wa.me/6281318806256"
+                    class="hidden rounded-full bg-hijau2 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-hijau1 lg:inline-block">
+                    Sewa Gedung
+                </a>
+
+                <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"
+                    class="flex h-10 w-10 items-center justify-center rounded-md text-hijau1 lg:hidden">
+                    <svg id="icon-open" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </nav>
+
+            <div id="mobile-menu" class="hidden border-t border-black/5 bg-white px-4 pb-4 lg:hidden dark:bg-black">
+                <ul class="flex flex-col divide-y divide-black/5">
+                    <li><a href="#beranda" class="block py-3 text-sm font-medium text-black/70 dark:text-white/70">Beranda</a></li>
+                    <li><a href="#jadwalSholat" class="block py-3 text-sm font-medium text-black/70 dark:text-white/70">Jadwal Sholat</a></li>
+                    <li><a href="#layanan" class="block py-3 text-sm font-medium text-black/70 dark:text-white/70">Layanan</a></li>
+                    <li><a href="#fasilitas" class="block py-3 text-sm font-medium text-black/70 dark:text-white/70">Fasilitas</a></li>
+                    <li><a href="#galeri" class="block py-3 text-sm font-medium text-black/70 dark:text-white/70">Galeri</a></li>
+                    <li><a href="#lokasi" class="block py-3 text-sm font-medium text-black/70 dark:text-white/70">Lokasi</a></li>
+                </ul>
+                <a href="https://wa.me/6281318806256"
+                    class="mt-3 block rounded-full bg-hijau2 px-5 py-2.5 text-center text-sm font-semibold text-white">
+                    Sewa Gedung
+                </a>
+            </div>
+        </header>
+
+        <main>
+            {{-- Hero --}}
+            <header id="beranda" class="relative flex min-h-[92vh] items-center overflow-hidden">
+                <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/img/masjid.jpg') }}');">
+                    <div class="absolute inset-0 bg-gradient-to-t from-hijau1/90 via-hijau1/50 to-hijau1/20"></div>
                 </div>
 
-                <nav
-                    class="absolute left-0 right-0 z-30 flex flex-wrap items-center px-4 py-2 mx-6 my-4 shadow-2xl top-10 rounded-xl bg-white/80 backdrop-blur-lg backdrop-saturate-100 lg:flex-nowrap lg:justify-start">
-                    <div class="flex items-center justify-between w-full p-0 mx-auto md:pl-6 flex-wrap-inherit">
-                        <img class="w-[15%] md:w-[8%] lg:w-[5%] block mr-14"
-                            src="{{ asset('assets/img/logoMasjid.png') }}"" alt="Logo Masjid At Taubah">
-                        <button navbar-trigger
-                            class="px-3 py-1 ml-1 text-lg leading-none transition-all ease-out bg-transparent rounded-lg shadow-none cursor-pointer lg:hidden"
-                            type="button" aria-controls="navigation" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span
-                                class="inline-block w-6 h-6 mt-2 align-middle bg-center bg-no-repeat bg-cover lg:mt-2 bg-none">
-                                <span bar1
-                                    class="relative block h-1 mx-auto my-0 transition-all duration-300 bg-gray-600 rounded-sm w-7"></span>
-                                <span bar2
-                                    class="relative block h-1 mx-auto my-0 mt-1 transition-all duration-300 bg-gray-600 rounded-sm w-7"></span>
-                                <span bar3
-                                    class="relative block h-1 mx-auto my-0 mt-1 transition-all duration-300 bg-gray-600 rounded-sm w-7"></span>
-                            </span>
-                        </button>
-                        <div navbar-menu
-                            class="items-center justify-end overflow-hidden transition-all duration-500 ease-soft lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
-                            <ul class="flex flex-col justify-end pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto">
-                                <li class="text-xl">
-                                    <a class="flex items-center px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        aria-current="page" href="#beranda">
+                <img src="{{ asset('assets/img/pattern1.png') }}" alt="" aria-hidden="true"
+                    class="pointer-events-none absolute -right-10 -top-10 w-40 opacity-30 lg:w-56">
 
-                                        Beranda
-                                    </a>
-                                </li>
-                                <li class="text-xl">
-                                    <a class="flex items-center px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        aria-current="page" href="#jadwalSholat">
-
-                                        Jadwal Sholat
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="block px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        href="#fasilitas">
-
-                                        Fasilitas
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="block px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        href="#layanan">
-
-                                        Layanan
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="block px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        href="#galeri">
-                                        Galeri
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="relative z-10 mx-auto max-w-3xl px-6 text-center text-white sm:px-8">
+                    <span class="inline-block rounded-full border border-white/30 bg-white/10 px-4 py-1 text-xs font-medium tracking-wide backdrop-blur-sm">
+                        Jl. Ir. H. Juanda No. Km.2, Baktijaya, Sukmajaya — Depok
+                    </span>
+                    <h1 class="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl" style="font-family: Poppins, sans-serif;">
+                        Masjid Jami At Taubah
+                    </h1>
+                    <p class="mx-auto mt-5 max-w-xl text-base text-white/85 sm:text-lg">
+                        Rumah ibadah dan pusat kegiatan warga di Kota Depok — tempat sholat, belajar,
+                        dan bersilaturahmi bagi jamaah dari segala usia.
+                    </p>
+                    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                        <a href="https://wa.me/6281318806256"
+                            class="w-full rounded-full bg-white px-7 py-3 text-sm font-semibold text-hijau1 shadow-lg transition hover:scale-105 sm:w-auto">
+                            Sewa Gedung Serba Guna
+                        </a>
+                        <a href="#jadwalSholat"
+                            class="w-full rounded-full border border-white/50 px-7 py-3 text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto">
+                            Lihat Jadwal Sholat
+                        </a>
                     </div>
-                </nav>
-                <main class="mt-24 md:mt-28 lg:mt-32">
-                    <header id="beranda" class="relative flex items-center justify-center h-screen overflow-hidden">
-                        <div class="absolute inset-0 z-0 w-full h-full bg-center bg-cover"
-                            style="background-image: url('{{ asset('assets/img/masjid.jpg') }}');">
-                            <div class="absolute inset-0 bg-black opacity-50"></div>
-                        </div>
-                        <div
-                            class="relative z-10 flex flex-col items-center justify-center max-w-3xl p-5 text-white rounded-lg">
-                            <h1 class="mb-5 text-3xl font-bold text-center text-white uppercase lg:text-5xl">
-                                Masjid Jami At Taubah
-                            </h1>
-                            <p class="mb-3 text-base text-center md:text-lg">Masjid Jami At Taubah merupakan salah satu
-                                masjid yang
-                                ada di Kota
-                                Depok, terletak di Jalan. Ir. H. Juanda No.Km.2, RW.16, Kel. Baktijaya, Kec. Sukmajaya.
-                            </p>
-                            <a href="https://wa.me/6281318806256"
-                                class="p-3 mt-4 text-white transition-all ease-in-out rounded-md shadow-md md:mt-8 btn btn-primary bg-hijau2 w-fit hover:bg-hijau3 hover:scale-105">Menyewa
-                                Gedung Serba Guna</a>
-                        </div>
-                    </header>
+                </div>
+            </header>
 
-                    <div class="relative mt-14" id="jadwalSholat">
-                        <img src="{{ asset('assets/img/pattern1.png') }}"
-                            class="absolute -top-[55px] right-0 w-[20%] md:w-[15%] lg:w-[8%]" alt="patter islamic">
-                        <img src="{{ asset('assets/img/pattern1.png') }}"
-                            class="absolute -top-[55px] left-0 w-[20%] md:w-[15%] lg:w-[8%]" alt="patter islamic">
-                        <img src="{{ asset('assets/img/pattern2.png') }}"
-                            class="absolute -bottom-[50px] lg:-bottom-[90px] inset-x-0 w-[10%] md:w-[8%] lg:w-[5%]"
-                            alt="patter islamic">
-                        <h1
-                            class="text-2xl font-bold tracking-wide text-center uppercase md:text-3xl text-hijau1 hover:underline">
-                            Jadwal Sholat
-                        </h1>
-                        <p class="text-lg text-center text-hijau2">Depok, Sukmajaya</p>
-                        <p class="text-lg text-center text-hijau2" id="date_sholat">Hari</p>
-                        <div class="grid grid-cols-6 mt-9 lg:px-14 lg:gap-3">
-                            <div
-                                class="block p-2 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
-                                <h5
-                                    class="mb-2 text-sm font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                    🌘
-                                    Imsak
-                                </h5>
-                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 imsak">Pukul </p>
-                            </div>
-                            <div
-                                class="block p-2 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau2">
-                                <h5
-                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                    🌅
-                                    Subuh
-                                </h5>
-                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 subuh">Pukul </p>
-                            </div>
-                            <div
-                                class="block p-2 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
-                                <h5
-                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                    🌞
-                                    Dzuhur
-                                </h5>
-                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 dzuhur">Pukul </p>
-                            </div>
-                            <div
-                                class="block p-2 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau4">
-                                <h5
-                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                    🌤️
-                                    Ashar
-                                </h5>
-                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 ashar">Pukul </p>
-                            </div>
-                            <div
-                                class="block p-2 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
-                                <h5
-                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                    🌌
-                                    Maghrib
-                                </h5>
-                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 maghrib">Pukul </p>
-                            </div>
-                            <div
-                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau4">
-                                <h5
-                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                    🌙 Isya
-                                </h5>
-                                <p class="text-sm font-normal text-gray-700 dark:text-gray-400 isya">Pukul </p>
-                            </div>
-                        </div>
-                        <p class="px-4 mt-4 text-center lg:px-14">*Sumber <a
-                                href="https://bimasislam.kemenag.go.id/jadwalshalat"
-                                class="hover:text-green-600">https://bimasislam.kemenag.go.id/jadwalshalat</a>
+            {{-- Jadwal Sholat --}}
+            <section id="jadwalSholat" class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold uppercase tracking-wide text-hijau1 sm:text-3xl" style="font-family: Poppins, sans-serif;">
+                        Jadwal Sholat
+                    </h2>
+                    <p class="mt-2 text-hijau2">Depok, Sukmajaya</p>
+                    <p class="text-sm text-hijau2/80" id="date_sholat">Hari</p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-3 gap-3 sm:grid-cols-6 lg:gap-4">
+                    <div class="jadwal-card arch flex flex-col items-center gap-2 bg-white p-4 pt-7 text-center shadow-sm transition dark:bg-white/5" data-key="imsak">
+                        <span class="text-2xl">🌘</span>
+                        <span class="text-sm font-semibold text-hijau1 dark:text-white">Imsak</span>
+                        <span class="imsak text-sm text-black/60 dark:text-white/60">--:--</span>
+                    </div>
+                    <div class="jadwal-card arch flex flex-col items-center gap-2 bg-hijau4 p-4 pt-7 text-center shadow-sm transition" data-key="subuh">
+                        <span class="text-2xl">🌅</span>
+                        <span class="text-sm font-semibold text-hijau1">Subuh</span>
+                        <span class="subuh text-sm text-hijau1/70">--:--</span>
+                    </div>
+                    <div class="jadwal-card arch flex flex-col items-center gap-2 bg-white p-4 pt-7 text-center shadow-sm transition dark:bg-white/5" data-key="dzuhur">
+                        <span class="text-2xl">🌞</span>
+                        <span class="text-sm font-semibold text-hijau1 dark:text-white">Dzuhur</span>
+                        <span class="dzuhur text-sm text-black/60 dark:text-white/60">--:--</span>
+                    </div>
+                    <div class="jadwal-card arch flex flex-col items-center gap-2 bg-hijau4 p-4 pt-7 text-center shadow-sm transition" data-key="ashar">
+                        <span class="text-2xl">🌤️</span>
+                        <span class="text-sm font-semibold text-hijau1">Ashar</span>
+                        <span class="ashar text-sm text-hijau1/70">--:--</span>
+                    </div>
+                    <div class="jadwal-card arch flex flex-col items-center gap-2 bg-white p-4 pt-7 text-center shadow-sm transition dark:bg-white/5" data-key="maghrib">
+                        <span class="text-2xl">🌌</span>
+                        <span class="text-sm font-semibold text-hijau1 dark:text-white">Maghrib</span>
+                        <span class="maghrib text-sm text-black/60 dark:text-white/60">--:--</span>
+                    </div>
+                    <div class="jadwal-card arch flex flex-col items-center gap-2 bg-hijau4 p-4 pt-7 text-center shadow-sm transition" data-key="isya">
+                        <span class="text-2xl">🌙</span>
+                        <span class="text-sm font-semibold text-hijau1">Isya</span>
+                        <span class="isya text-sm text-hijau1/70">--:--</span>
+                    </div>
+                </div>
+
+                <p class="mt-6 text-center text-xs text-black/50 dark:text-white/40">
+                    *Sumber
+                    <a href="https://bimasislam.kemenag.go.id/jadwalshalat" class="underline hover:text-hijau2">bimasislam.kemenag.go.id</a>
+                </p>
+            </section>
+
+            {{-- Layanan --}}
+            <section id="layanan" class="bg-hijau1 py-20">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                    <div class="text-center text-white">
+                        <h2 class="text-2xl font-bold uppercase tracking-wide text-white sm:text-3xl" style="font-family: Poppins, sans-serif;">
+                            Layanan dan Bantuan Masjid
+                        </h2>
+                        <p class="mx-auto mt-2 max-w-md text-sm text-white/70">
+                            Beberapa layanan yang bisa dimanfaatkan jamaah dan warga sekitar.
                         </p>
                     </div>
-                    <div class="px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
-                        id="layanan">
-                        <div class="absolute inset-0 z-0 w-full h-full bg-center bg-cover invert-20 hue-rotat3-90 contrast-75"
-                            style="background-image: url('{{ asset('assets/img/IMG_2350.jpg') }}');">
-                            <div class="absolute inset-0 opacity-50 bg-hijau1"></div>
-                        </div>
-                        <div class="relative z-10 flex flex-col items-center justify-center p-5 text-white rounded-lg">
-                            <h1
-                                class="text-3xl font-bold tracking-wide text-center text-white uppercase md:text-3xl hover:underline">
-                                Layanan dan
-                                Bantuan
-                                Masjid</h1>
-                        </div>
 
-                        <div class="mt-10 overflow-hidden md:mt-14 swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/zakat.jpeg') }}"
-                                            alt="zakat" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
-                                                Pembayaran Zakat
-                                            </h3>
-                                        </div>
+                    <div class="mt-12 swiper text-hijau3">
+                        <div class="swiper-wrapper items-stretch">
+                            <div class="swiper-slide h-auto py-3">
+                                <div class="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-xl shadow-black/10 transition hover:-translate-y-1">
+                                    <div class="relative">
+                                        <img class="aspect-[16/10] w-full rounded-t-3xl object-cover" src="{{ asset('assets/img/zakat.jpeg') }}" alt="Pembayaran zakat">
+                                        <span class="absolute -bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-full bg-hijau2 text-lg text-white shadow-lg ring-4 ring-white">💰</span>
+                                    </div>
+                                    <div class="flex flex-1 flex-col px-5 pb-5 pt-8">
+                                        <h3 class="font-semibold text-hijau1" style="font-family: Poppins, sans-serif;">Pembayaran Zakat</h3>
+                                        <p class="mt-1 text-sm text-black/55">Salurkan zakat fitrah dan mal langsung melalui pengurus masjid.</p>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/hewanqurban.jpeg') }}"
-                                            alt="hewan qurban" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
-                                                Pendaftaran Hewan Qurban
-                                            </h3>
-                                        </div>
+                            </div>
+                            <div class="swiper-slide h-auto py-3">
+                                <div class="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-xl shadow-black/10 transition hover:-translate-y-1">
+                                    <div class="relative">
+                                        <img class="aspect-[16/10] w-full rounded-t-3xl object-cover" src="{{ asset('assets/img/hewanqurban.jpeg') }}" alt="Pendaftaran hewan qurban">
+                                        <span class="absolute -bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-full bg-hijau2 text-lg text-white shadow-lg ring-4 ring-white">🐐</span>
+                                    </div>
+                                    <div class="flex flex-1 flex-col px-5 pb-5 pt-8">
+                                        <h3 class="font-semibold text-hijau1" style="font-family: Poppins, sans-serif;">Pendaftaran Hewan Qurban</h3>
+                                        <p class="mt-1 text-sm text-black/55">Daftarkan hewan qurban Anda untuk Idul Adha setiap tahunnya.</p>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/santunan.jpg') }}"
-                                            alt="santunan" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
-                                                Santunan Yatim Piatu
-                                            </h3>
-                                        </div>
+                            </div>
+                            <div class="swiper-slide h-auto py-3">
+                                <div class="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-xl shadow-black/10 transition hover:-translate-y-1">
+                                    <div class="relative">
+                                        <img class="aspect-[16/10] w-full rounded-t-3xl object-cover" src="{{ asset('assets/img/santunan.jpg') }}" alt="Santunan yatim piatu">
+                                        <span class="absolute -bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-full bg-hijau2 text-lg text-white shadow-lg ring-4 ring-white">🤲</span>
+                                    </div>
+                                    <div class="flex flex-1 flex-col px-5 pb-5 pt-8">
+                                        <h3 class="font-semibold text-hijau1" style="font-family: Poppins, sans-serif;">Santunan Yatim Piatu</h3>
+                                        <p class="mt-1 text-sm text-black/55">Program rutin santunan bagi anak yatim di lingkungan sekitar.</p>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg"
-                                            src="{{ asset('assets/img/penggalanganDana.jpg') }}"
-                                            alt="penggalangan dana" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
-                                                Penggalangan Dana
-                                            </h3>
-                                        </div>
+                            </div>
+                            <div class="swiper-slide h-auto py-3">
+                                <div class="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-xl shadow-black/10 transition hover:-translate-y-1">
+                                    <div class="relative">
+                                        <img class="aspect-[16/10] w-full rounded-t-3xl object-cover" src="{{ asset('assets/img/penggalanganDana.jpg') }}" alt="Penggalangan dana">
+                                        <span class="absolute -bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-full bg-hijau2 text-lg text-white shadow-lg ring-4 ring-white">🤝</span>
+                                    </div>
+                                    <div class="flex flex-1 flex-col px-5 pb-5 pt-8">
+                                        <h3 class="font-semibold text-hijau1" style="font-family: Poppins, sans-serif;">Penggalangan Dana</h3>
+                                        <p class="mt-1 text-sm text-black/55">Bantu pembangunan dan operasional masjid melalui donasi.</p>
                                     </div>
                                 </div>
-                                <!-- Add more slides as needed -->
                             </div>
                         </div>
-
+                        <div class="swiper-pagination !relative mt-8"></div>
                     </div>
-                    <div class="relative px-8 pt-16 mt-10 md:px-14 lg:px-28 lg:mt-24" id="fasilitas">
-                        <img src="{{ asset('assets/img/pattern4.png') }}"
-                            class="absolute -top-10 lg:-top-[95px] right-0 w-[40%] lg:w-[20%] md:w-[25%]"
-                            alt="patter islamic">
-                        <img src="{{ asset('assets/img/pattern3.png') }}"
-                            class="absolute -top-[40px] lg:-top-[75px] left-2 lg:left-4 w-[20%] lg:w-[8%] md:w-[15%]"
-                            alt="patter islamic">
-                        <h1
-                            class="text-2xl font-bold tracking-wide text-center uppercase md:text-3xl text-hijau1 hover:underline">
-                            Fasilitas
-                            Masjid</h1>
+                </div>
+            </section>
 
+            {{-- Fasilitas --}}
+            <section id="fasilitas" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+                <h2 class="text-center text-2xl font-bold uppercase tracking-wide text-hijau1 sm:text-3xl" style="font-family: Poppins, sans-serif;">
+                    Fasilitas Masjid
+                </h2>
 
-                        <div id="default-carousel" class="relative w-full lg:mt-14" data-carousel="static">
-                            <!-- Carousel wrapper -->
-                            <div class="relative h-96 overflow-hidden rounded-lg  md:h-[500px]">
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="{{ asset('assets/img/GSM.jpg') }}"
-                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                        alt="Gedung Serba Guna">
-                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
-                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Gedung
-                                                Serba Guna
-                                            </h2>
-                                            <p class="hidden mt-2 text-sm md:text-base md:inline">Gedung untuk
-                                                pernikahan, pengajian,
-                                                acara hari besar.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Item 4 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="{{ asset('assets/img/tempatsholat.jpg') }}"
-                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                        alt="tempat sholat">
-                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
-                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Tempat
-                                                Sholat</h2>
-                                            <p class="hidden mt-2 text-sm md:text-base md:inline">Tempat sholat yang
-                                                tersedia dengan 2
-                                                lantai.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Item 2 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="{{ asset('assets/img/keranda.jpg') }}"
-                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                        alt="keranda">
-                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
-                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Keranda
-                                            </h2>
-                                            <p class="hidden mt-2 text-sm md:text-base md:inline">Keranda untuk
-                                                mengangkut jenazah
-                                                tersedia di masjid.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Item 1 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="{{ asset('assets/img/kainkafan.jpg') }}"
-                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
-                                        alt="kain kafan">
-                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
-                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Kain
-                                                Kafan</h2>
-                                            <p class="hidden mt-2 md:inline">Kain kafan tersedia untuk keperluan
-                                                jenazah.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Item 5 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="{{ asset('assets/img/toilet.jpg') }}"
-                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                        alt="toilet">
-                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
-                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Toilet
-                                            </h2>
-                                            <p class="hidden mt-2 md:inline">Tersedia toilet untuk laki - laki di
-                                                lantai bawah dan
-                                                perempuan di lantai atas.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Item 6 -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="{{ asset('assets/img/AC.jpg') }}"
-                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                        alt="AC">
-                                    <div class="absolute inset-0 flex items-center justify-center px-14 md:px-0">
-                                        <div class="p-4 text-black bg-white rounded-lg backdrop-blur-sm bg-opacity-30">
-                                            <h2 class="text-lg font-bold text-center md:text-2xl text-hijau1">Air
-                                                Conditioner</h2>
-                                            <p class="hidden mt-2 md:inline">Masjid dilengkapi dengan AC agar jamaah
-                                                nyaman dalam
-                                                beribadah.</p>
-                                        </div>
-                                    </div>
+                <div class="relative mt-12" data-fas-carousel>
+                    <div class="relative h-96 overflow-hidden rounded-2xl md:h-[480px]">
+                        <div data-fas-slide class="absolute inset-0 transition-opacity duration-700">
+                            <img src="{{ asset('assets/img/GSM.jpg') }}" class="h-full w-full object-cover" alt="Gedung Serba Guna">
+                            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 sm:p-10">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white sm:text-2xl" style="font-family: Poppins, sans-serif;">Gedung Serba Guna</h3>
+                                    <p class="mt-1 max-w-md text-sm text-white/85">Gedung untuk pernikahan, pengajian, dan acara hari besar.</p>
                                 </div>
                             </div>
-                            <!-- Slider indicators -->
-                            <div
-                                class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 rtl:space-x-reverse">
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="true"
-                                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
-                                    aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
-                                    aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
-                                    aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
-                                    aria-label="Slide 5" data-carousel-slide-to="4"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
-                                    aria-label="Slide 6" data-carousel-slide-to="5"></button>
-                            </div>
-                            <!-- Slider controls -->
-                            <button type="button"
-                                class="absolute top-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer start-0 group focus:outline-none"
-                                data-carousel-prev>
-                                <span
-                                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 6 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M5 1 1 5l4 4" />
-                                    </svg>
-                                    <span class="sr-only">Previous</span>
-                                </span>
-                            </button>
-                            <button type="button"
-                                class="absolute top-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer end-0 group focus:outline-none"
-                                data-carousel-next>
-                                <span
-                                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 6 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m1 9 4-4-4-4" />
-                                    </svg>
-                                    <span class="sr-only">Next</span>
-                                </span>
-                            </button>
                         </div>
-
-                    </div>
-                    <div class="relative px-8 py-16 border border-gray-200 rounded-lg shadow-lg md:mt-24 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
-                        id="galeri">
-                        <img src="{{ asset('assets/img/pattern5.png') }}"
-                            class="absolute -top-[10px] right-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
-                        <img src="{{ asset('assets/img/pattern6.png') }}"
-                            class="absolute top-[5px] left-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
-                        <h1
-                            class="text-2xl font-bold tracking-wide text-center text-white uppercase md:text-3xl hover:underline">
-                            Galeri
-                            Masjid</h1>
-                        <div class="grid grid-cols-2 gap-4 mt-8 md:mt-14 md:grid-cols-3">
-                            <div>
-                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
-                                    src="{{ asset('assets/img/galeri2.jpg') }}" alt="fotoGaleri">
+                        <div data-fas-slide class="absolute inset-0 hidden transition-opacity duration-700">
+                            <img src="{{ asset('assets/img/tempatsholat.jpg') }}" class="h-full w-full object-cover" alt="Tempat sholat">
+                            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 sm:p-10">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white sm:text-2xl" style="font-family: Poppins, sans-serif;">Tempat Sholat</h3>
+                                    <p class="mt-1 max-w-md text-sm text-white/85">Ruang sholat luas dengan 2 lantai.</p>
+                                </div>
                             </div>
-                            <div>
-                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
-                                    src="{{ asset('assets/img/galeri3.jpg') }}" alt="fotoGaleri">
+                        </div>
+                        <div data-fas-slide class="absolute inset-0 hidden transition-opacity duration-700">
+                            <img src="{{ asset('assets/img/keranda.jpg') }}" class="h-full w-full object-cover" alt="Keranda">
+                            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 sm:p-10">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white sm:text-2xl" style="font-family: Poppins, sans-serif;">Keranda</h3>
+                                    <p class="mt-1 max-w-md text-sm text-white/85">Keranda untuk mengangkut jenazah tersedia di masjid.</p>
+                                </div>
                             </div>
-                            <div>
-                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
-                                    src="{{ asset('assets/img/galeri1.jpg') }}" alt="fotoGaleri">
+                        </div>
+                        <div data-fas-slide class="absolute inset-0 hidden transition-opacity duration-700">
+                            <img src="{{ asset('assets/img/kainkafan.jpg') }}" class="h-full w-full object-cover" alt="Kain kafan">
+                            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 sm:p-10">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white sm:text-2xl" style="font-family: Poppins, sans-serif;">Kain Kafan</h3>
+                                    <p class="mt-1 max-w-md text-sm text-white/85">Kain kafan tersedia untuk keperluan jenazah.</p>
+                                </div>
                             </div>
-                            <div>
-                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
-                                    src="{{ asset('assets/img/galeri4.jpg') }}" alt="fotoGaleri">
+                        </div>
+                        <div data-fas-slide class="absolute inset-0 hidden transition-opacity duration-700">
+                            <img src="{{ asset('assets/img/toilet.jpg') }}" class="h-full w-full object-cover" alt="Toilet">
+                            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 sm:p-10">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white sm:text-2xl" style="font-family: Poppins, sans-serif;">Toilet</h3>
+                                    <p class="mt-1 max-w-md text-sm text-white/85">Toilet laki-laki di lantai bawah, perempuan di lantai atas.</p>
+                                </div>
                             </div>
-                            <div>
-                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
-                                    src="{{ asset('assets/img/galeri6.jpg') }}" alt="fotoGaleri">
-                            </div>
-                            <div>
-                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
-                                    src="{{ asset('assets/img/galeri5.jpg') }}" alt="fotoGaleri">
+                        </div>
+                        <div data-fas-slide class="absolute inset-0 hidden transition-opacity duration-700">
+                            <img src="{{ asset('assets/img/AC.jpg') }}" class="h-full w-full object-cover" alt="Air Conditioner">
+                            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 sm:p-10">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white sm:text-2xl" style="font-family: Poppins, sans-serif;">Air Conditioner</h3>
+                                    <p class="mt-1 max-w-md text-sm text-white/85">Masjid dilengkapi AC agar jamaah nyaman beribadah.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="px-3 py-16 md:px-8 lg:mt-24 mt-14">
-                        <h1
-                            class="mb-8 text-2xl font-bold tracking-wide text-center uppercase md:text-3xl text-hijau1">
-                            Lokasi
-                            Masjid</h1>
+                    <div class="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-2" data-fas-dots></div>
+
+                    <button type="button" data-fas-prev aria-label="Sebelumnya"
+                        class="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/70 text-hijau1 backdrop-blur-sm hover:bg-white">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button type="button" data-fas-next aria-label="Berikutnya"
+                        class="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/70 text-hijau1 backdrop-blur-sm hover:bg-white">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </section>
+
+            {{-- Galeri --}}
+            <section id="galeri" class="bg-hijau4/60 py-20 dark:bg-white/5">
+                <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-center text-2xl font-bold uppercase tracking-wide text-hijau1 sm:text-3xl" style="font-family: Poppins, sans-serif;">
+                        Galeri Masjid
+                    </h2>
+
+                    <div class="mt-10 grid grid-flow-dense auto-rows-[130px] grid-cols-2 gap-3 sm:auto-rows-[150px] sm:grid-cols-4 sm:gap-4 lg:auto-rows-[170px]">
+                        @php
+                            $tiles = [
+                                ['n' => 2, 'span' => 'col-span-2 row-span-2'],
+                                ['n' => 3, 'span' => 'col-span-1 row-span-1'],
+                                ['n' => 1, 'span' => 'col-span-1 row-span-1'],
+                                ['n' => 4, 'span' => 'col-span-2 row-span-1'],
+                                ['n' => 6, 'span' => 'col-span-1 row-span-1'],
+                                ['n' => 5, 'span' => 'col-span-1 row-span-1'],
+                            ];
+                        @endphp
+                        @foreach ($tiles as $tile)
+                            <div class="group relative overflow-hidden rounded-2xl {{ $tile['span'] }}">
+                                <img class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                                    src="{{ asset('assets/img/galeri' . $tile['n'] . '.jpg') }}" alt="Galeri kegiatan masjid {{ $tile['n'] }}">
+                                <div class="absolute inset-0 bg-hijau1/0 transition group-hover:bg-hijau1/20"></div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </section>
+
+            {{-- Lokasi --}}
+            <section id="lokasi" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+                <h2 class="text-center text-2xl font-bold uppercase tracking-wide text-hijau1 sm:text-3xl" style="font-family: Poppins, sans-serif;">
+                    Lokasi Masjid
+                </h2>
+
+                <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                    <div class="rounded-2xl bg-hijau1 p-8 text-white lg:col-span-1">
+                        <h3 class="font-semibold text-white" style="font-family: Poppins, sans-serif;">Alamat</h3>
+                        <p class="mt-2 text-sm text-white/80">
+                            Jl. Ir. H. Juanda No. Km.2, RW.16, Kel. Baktijaya, Kec. Sukmajaya, Kota Depok.
+                        </p>
+                        <h3 class="mt-6 font-semibold text-white" style="font-family: Poppins, sans-serif;">Kontak</h3>
+                        <a href="https://wa.me/6281318806256" class="mt-2 inline-block text-sm text-white/80 hover:text-white hover:underline">
+                            +62 813-1880-6256 (WhatsApp)
+                        </a>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl lg:col-span-2">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4368505855245!2d106.8479536!3d-6.3799304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec77d6134e97%3A0xf5bedde41bf5124e!2sMasjid%20Jami'%20At-Taubah!5e0!3m2!1sen!2sid!4v1612309600000!5m2!1sen!2sid"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                            width="100%" height="100%" style="border:0; min-height: 320px;" allowfullscreen="" loading="lazy">
                         </iframe>
-
-
                     </div>
-                </main>
+                </div>
+            </section>
+        </main>
 
-
-                <footer class="m-4 overflow-hidden dark:bg-gray-800">
-                    <div class="w-full max-w-screen-xl p-4 mx-auto md:flex md:items-center md:justify-between">
-                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
-                                href="https://flowbite.com/" class="hover:underline">Masjid Jami At Taubah juanda Kota
-                                Depok</a>
-                        </span>
-                        <ul
-                            class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                            <li>
-                                <a href="#beranda" class="hover:underline me-4 md:me-6">Beranda</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline me-4 md:me-6">Jadwal Sholat</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline me-4 md:me-6">Fasilitas</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline me-4 md:me-6">Layanan</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Galeri</a>
-                            </li>
+        <footer class="bg-hijau1 text-white/70">
+            <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <img src="{{ asset('assets/img/logoMasjid.png') }}" alt="Logo Masjid" class="h-10 w-10">
+                            <span class="font-semibold text-white" style="font-family: Poppins, sans-serif;">Masjid Jami At Taubah</span>
+                        </div>
+                        <p class="mt-3 text-sm">Rumah ibadah dan pusat kegiatan warga di Juanda, Kota Depok.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white">Jelajahi</h4>
+                        <ul class="mt-3 space-y-2 text-sm">
+                            <li><a href="#jadwalSholat" class="hover:text-white hover:underline">Jadwal Sholat</a></li>
+                            <li><a href="#layanan" class="hover:text-white hover:underline">Layanan</a></li>
+                            <li><a href="#fasilitas" class="hover:text-white hover:underline">Fasilitas</a></li>
+                            <li><a href="#galeri" class="hover:text-white hover:underline">Galeri</a></li>
                         </ul>
                     </div>
-                </footer>
-
+                    <div>
+                        <h4 class="font-semibold text-white">Kontak</h4>
+                        <ul class="mt-3 space-y-2 text-sm">
+                            <li><a href="https://wa.me/6281318806256" class="hover:text-white hover:underline">WhatsApp Pengurus</a></li>
+                            <li><a href="#lokasi" class="hover:text-white hover:underline">Lihat Lokasi</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white">Dukung Masjid</h4>
+                        <p class="mt-3 text-sm">Ikut berkontribusi lewat donasi atau penggalangan dana masjid.</p>
+                        <a href="#layanan" class="mt-3 inline-block rounded-full bg-white px-5 py-2 text-sm font-semibold text-hijau1">
+                            Donasi Sekarang
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/50">
+                    © {{ date('Y') }} Masjid Jami At Taubah — Juanda, Kota Depok.
+                </div>
             </div>
-        </div>
+        </footer>
     </div>
 </body>
 @include('admin.layouts.partials.scripts')
-<script>
-    let getDate = new Date();
-    let getYear = getDate.getFullYear();
-    let getMonth = getDate.getMonth() + 1; // Tambahkan 1 karena getMonth() dimulai dari 0 (Januari = 0)
-    let getDay = getDate.getDate();
 
-    function bulan() {
-        if (getMonth < 10) {
-            bulan = '0' + getMonth
-        } else {
-            bulan = getMonth
-        }
-        return bulan
-    }
-
-    function hari() {
-        if (getDay < 10) {
-            hari = '0' + getDay
-        } else {
-            hari = getDay
-        }
-        return hari
-    }
-
-
-    let tanggal = getYear + '-' + bulan() + '-' + hari();
-    console.log('tanggal' + tanggal)
-
-    function getSholat() {
-        fetch(`https://api.myquran.com/v2/sholat/jadwal/1225/${tanggal}`)
-            .then(res => res.json())
-            .then(data => {
-                let jadwal = data.data.jadwal
-                document.getElementById('date_sholat').textContent = jadwal.tanggal
-                document.querySelector('.imsak').textContent = jadwal.imsak
-                document.querySelector('.subuh').textContent = jadwal.subuh
-                document.querySelector('.dzuhur').textContent = jadwal.dzuhur
-                document.querySelector('.ashar').textContent = jadwal.ashar
-                document.querySelector('.maghrib').textContent = jadwal.maghrib
-                document.querySelector('.isya').textContent = jadwal.isya
-            })
-    }
-    getSholat();
-</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM Content Loaded');
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
-            },
+    const nav = document.getElementById('site-navbar');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('navbar-shadow', window.scrollY > 8);
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    menuToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden', !isOpen);
+        iconClose.classList.toggle('hidden', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+        });
+    });
+
+
+    const today = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    const tanggal = `${today.getFullYear()}-${pad(today.getMonth() + 1)}-${pad(today.getDate())}`;
+
+    fetch(`https://api.myquran.com/v2/sholat/jadwal/1225/${tanggal}`)
+        .then(res => res.json())
+        .then(data => {
+            const jadwal = data.data.jadwal;
+            document.getElementById('date_sholat').textContent = jadwal.tanggal;
+            const keys = ['imsak', 'subuh', 'dzuhur', 'ashar', 'maghrib', 'isya'];
+            let activeKey = null;
+            const nowMinutes = today.getHours() * 60 + today.getMinutes();
+
+            keys.forEach(key => {
+                document.querySelector('.' + key).textContent = jadwal[key];
+                const [h, m] = jadwal[key].split(':').map(Number);
+                const minutes = h * 60 + m;
+                if (minutes <= nowMinutes) activeKey = key;
+            });
+
+            if (activeKey) {
+                const card = document.querySelector(`.jadwal-card[data-key="${activeKey}"]`);
+                if (card) card.classList.add('prayer-active', 'text-hijau1');
+            }
+        })
+        .catch(() => {
+            document.getElementById('date_sholat').textContent = 'Jadwal tidak tersedia saat ini';
+        });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.swiper', {
+            slidesPerView: 1.25,
+            spaceBetween: 20,
+            centeredSlides: false,
+            pagination: { el: '.swiper-pagination', clickable: true },
             breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 50,
-                },
+                480: { slidesPerView: 1.6, spaceBetween: 20 },
+                768: { slidesPerView: 2.4, spaceBetween: 24 },
+                1024: { slidesPerView: 4, spaceBetween: 24 },
             },
         });
     });
+
+    (function () {
+        const root = document.querySelector('[data-fas-carousel]');
+        if (!root) return;
+        const slides = Array.from(root.querySelectorAll('[data-fas-slide]'));
+        const dotsWrap = root.querySelector('[data-fas-dots]');
+        let index = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
+            dot.className = 'h-2.5 w-2.5 rounded-full bg-white/60 transition';
+            dot.addEventListener('click', () => show(i));
+            dotsWrap.appendChild(dot);
+        });
+        const dots = Array.from(dotsWrap.children);
+
+        function show(i) {
+            slides[index].classList.add('hidden');
+            dots[index].classList.remove('bg-white');
+            dots[index].classList.add('bg-white/60');
+            index = (i + slides.length) % slides.length;
+            slides[index].classList.remove('hidden');
+            dots[index].classList.remove('bg-white/60');
+            dots[index].classList.add('bg-white');
+        }
+        show(0);
+
+        root.querySelector('[data-fas-prev]').addEventListener('click', () => show(index - 1));
+        root.querySelector('[data-fas-next]').addEventListener('click', () => show(index + 1));
+
+        let timer = setInterval(() => show(index + 1), 6000);
+        root.addEventListener('mouseenter', () => clearInterval(timer));
+        root.addEventListener('mouseleave', () => timer = setInterval(() => show(index + 1), 6000));
+    })();
 </script>
 
 </html>
