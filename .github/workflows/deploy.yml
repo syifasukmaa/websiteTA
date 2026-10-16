@@ -1,0 +1,107 @@
+name: Laravel CI/CD
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  # =======================================================
+  # JOB 1: TESTING (Berjalan di cloud GitHub)
+  # =======================================================
+  laravel-test:
+    runs-on: ubuntu-latest
+    environment: SECRET
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+          MYSQL_DATABASE: ${{ secrets.DATABASE_NAME }}
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql, bcmath
+          coverage: none
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Build Frontend Assets
+        run: |
+          npm ci
+          npm run build
+
+      - name: Prepare Environment
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Run Database Migrations
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: ${{ secrets.DATABASE_HOST }}
+          DB_PORT: ${{ secrets.DATABASE_PORT }}
+          DB_DATABASE: ${{ secrets.DATABASE_NAME }}
+          DB_USERNAME: ${{secrets.DATABASE_USERNAME}}
+          DB_PASSWORD: ""
+        run: php artisan migrate --force
+
+      - name: Run Tests
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: ${{ secrets.DATABASE_HOST }}
+          DB_PORT: ${{ secrets.DATABASE_PORT }}
+          DB_DATABASE: ${{ secrets.DATABASE_NAME }}
+          DB_USERNAME: ${{secrets.DATABASE_USERNAME}}
+          DB_PASSWORD: ""
+        run: php artisan test
+
+  # =======================================================
+  # JOB 2: DEPLOY (Berjalan di Runner VPS)
+  # =======================================================
+  deploy:
+    needs: laravel-test
+    runs-on: self-hosted
+    environment: SECRET
+
+    steps:
+      - name: Deploy ke VPS
+        run: |
+          git config --global --add safe.directory ${{ secrets.FOLDER_VPS }}
+          cd ${{ secrets.FOLDER_VPS }}
+
+          php artisan down || true
+
+          git reset --hard HEAD
+
+          git pull origin main
+
+          if git diff --name-only ORIG_HEAD HEAD | grep -qE "composer\.(json|lock)"; then
+            composer install --no-dev --optimize-autoloader
+          fi
+
+          php artisan migrate --force
+
+          php artisan optimize:clear
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+
+          php artisan up
+          echo "🚀 Deploy selesai dengan sukses di server!"
