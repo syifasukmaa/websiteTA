@@ -87,9 +87,9 @@ jobs:
 
           php artisan down || true
 
-          git reset --hard HEAD
-
-          git pull origin main
+          # Sinkronkan kode di server langsung ke commit terbaru origin/main
+          git fetch origin main
+          git reset --hard origin/main
 
           if git diff --name-only ORIG_HEAD HEAD | grep -qE "composer\.(json|lock)"; then
             composer install --no-dev --optimize-autoloader
