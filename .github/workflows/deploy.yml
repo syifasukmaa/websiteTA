@@ -2,9 +2,8 @@ name: Laravel CI/CD
 
 on:
   push:
-    branches: ["main"]      # Menjalankan testing saat push ke branch main
     tags:
-      - "v*.*.*"            # Menjalankan deploy saat push tag versi, contoh: v1.0.0, v1.0.1
+      - "v*.*.*"            # Hanya berjalan saat push tag versi, contoh: v1.0.0, v1.0.1
 
 jobs:
   # =======================================================
